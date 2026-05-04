@@ -1,0 +1,92 @@
+site_name: EduPoin Documentation
+site_description: Panduan Lengkap Penggunaan Sistem Manajemen Sekolah EduPoin
+site_url: https://mitrakom.github.io/digitalgov-edupoin/
+site_author: Tim EduPoin
+
+repo_url: https://github.com/mitrakom/digitalgov-edupoin
+repo_name: digitalgov-edupoin
+edit_uri: edit/dev/user_guides/
+
+docs_dir: .
+site_build_dir: ../site/
+
+theme:
+  name: material
+  favicon: assets/images/favicon.ico
+  
+  palette:
+    - scheme: light
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: dark
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search:
+      lang: 
+        - en
+        - id
+
+markdown_extensions:
+  - pymdownx.emoji
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - admonition
+  - toc:
+      title: On this page
+  - tables
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Data Management:
+    - Overview: data-management/index.md
+    - Siswa: data-management/siswa.md
+    - Guru: data-management/guru.md
+    - Staf Sekolah: data-management/staf-sekolah.md
+  - Attendance:
+    - Presensi: attendance/presensi.md
+  - Grading:
+    - Overview: grading/index.md
+    - Bank Soal: grading/bank-soal.md
+    - Tugas: grading/tugas.md
+    - Nilai Akhir: grading/nilai-akhir.md
+    - Pembobotan: grading/pembobotan.md
+    - Modul Ajar: grading/modul-ajar.md
+  - Leave & Permissions:
+    - Perizinan: permissions-leave/perizinan.md
+  - Online Exams:
+    - Admin: exams/admin.md
+    - Guru: exams/guru.md
+    - Siswa: exams/siswa.md
+    - Monitoring: exams/monitoring.md
+  - Communications:
+    - Telegram: communications/telegram.md
+  - End of Semester:
+    - Akhir Semester: end-of-semester/akhir-semester.md
+  - Special Roles:
+    - Orang Tua: special-roles/orangtua.md
+
+extra:
+  version: 1.0
+  last_update: May 2026

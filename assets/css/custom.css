@@ -1,0 +1,249 @@
+/* EduPoin Custom Styling */
+
+/* Color Variables */
+:root {
+    --md-primary-fg-color: #3f51b5;
+    --md-accent-fg-color: #2196f3;
+    --md-typeset-color: #212121;
+    --md-background-color: #ffffff;
+}
+
+/* Dark mode overrides */
+[data-md-color-scheme="dark"] {
+    --md-primary-fg-color: #5c6bc0;
+    --md-accent-fg-color: #64b5f6;
+}
+
+/* Hero Section */
+.md-hero {
+    background: linear-gradient(135deg, #3f51b5 0%, #2196f3 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.md-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.md-hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Card Styling */
+.md-card {
+    background: #f5f5f5;
+    border-left: 4px solid #2196f3;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+[data-md-color-scheme="dark"] .md-card {
+    background: #3a3f4d;
+    border-left-color: #64b5f6;
+}
+
+/* Role Badge Styling */
+.role-admin {
+    background: #e3f2fd;
+    border-left-color: #1976d2;
+    color: #0d47a1;
+}
+
+.role-guru {
+    background: #f3e5f5;
+    border-left-color: #7b1fa2;
+    color: #4a148c;
+}
+
+.role-siswa {
+    background: #e8f5e9;
+    border-left-color: #388e3c;
+    color: #1b5e20;
+}
+
+.role-wali {
+    background: #fff3e0;
+    border-left-color: #f57c00;
+    color: #e65100;
+}
+
+/* Admonition Styling */
+.md-typeset .admonition {
+    border-left-color: #2196f3;
+}
+
+.md-typeset .admonition.warning {
+    border-left-color: #ff9800;
+}
+
+.md-typeset .admonition.danger {
+    border-left-color: #f44336;
+}
+
+.md-typeset .admonition.success {
+    border-left-color: #4caf50;
+}
+
+/* Link Styling */
+.md-typeset a {
+    color: #2196f3;
+    text-decoration: none;
+    border-bottom: 1px solid #e0e0e0;
+    transition: color 0.2s;
+}
+
+.md-typeset a:hover {
+    color: #1976d2;
+    border-bottom-color: #1976d2;
+}
+
+/* Code Block Styling */
+.md-typeset code {
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+[data-md-color-scheme="dark"] .md-typeset code {
+    background: #37474f;
+    color: #eceff1;
+}
+
+/* Table Styling */
+.md-typeset table {
+    border-collapse: collapse;
+}
+
+.md-typeset table th {
+    background: #f5f5f5;
+    color: #212121;
+    font-weight: 600;
+}
+
+[data-md-color-scheme="dark"] .md-typeset table th {
+    background: #37474f;
+    color: #eceff1;
+}
+
+.md-typeset table tr:hover {
+    background: #f0f0f0;
+}
+
+[data-md-color-scheme="dark"] .md-typeset table tr:hover {
+    background: #455a64;
+}
+
+/* Button Styling */
+.md-button {
+    background: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.md-button:hover {
+    background: #1976d2;
+}
+
+/* Tab Styling */
+.md-typeset .tabbed-set {
+    border-left-color: #2196f3;
+}
+
+/* Heading Styling */
+.md-typeset h1 {
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 10px;
+    color: #1a237e;
+}
+
+[data-md-color-scheme="dark"] .md-typeset h1 {
+    border-bottom-color: #5c6bc0;
+    color: #c5cae9;
+}
+
+.md-typeset h2 {
+    color: #283593;
+    margin-top: 30px;
+}
+
+[data-md-color-scheme="dark"] .md-typeset h2 {
+    color: #7986cb;
+}
+
+/* Lists */
+.md-typeset ul li::before {
+    color: #2196f3;
+}
+
+.md-typeset ol li::before {
+    color: #3f51b5;
+}
+
+/* Footer */
+.md-footer {
+    background: #37474f;
+    color: #eceff1;
+}
+
+.md-footer a {
+    color: #64b5f6;
+}
+
+/* Navigation */
+.md-nav {
+    font-size: 0.95em;
+}
+
+.md-nav__link {
+    transition: color 0.2s;
+}
+
+.md-nav__link:hover {
+    color: #2196f3;
+}
+
+.md-nav__link--active {
+    color: #2196f3;
+    font-weight: 600;
+}
+
+/* Search */
+.md-search__input {
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .md-hero h1 {
+        font-size: 1.8em;
+    }
+    
+    .md-hero p {
+        font-size: 1em;
+    }
+}
+
+/* Print styles */
+@media print {
+    .md-header,
+    .md-nav,
+    .md-footer {
+        display: none;
+    }
+    
+    .md-typeset {
+        color: #000;
+    }
+}

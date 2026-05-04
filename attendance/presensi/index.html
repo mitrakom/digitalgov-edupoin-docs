@@ -1,0 +1,3519 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Panduan Lengkap Penggunaan Sistem Manajemen Sekolah EduPoin">
+      
+      
+        <meta name="author" content="Tim EduPoin">
+      
+      
+        <link rel="canonical" href="https://mitrakom.github.io/digitalgov-edupoin-docs/attendance/presensi/">
+      
+      
+        <link rel="prev" href="../../data-management/staf-sekolah/">
+      
+      
+        <link rel="next" href="../../grading/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Presensi - EduPoin Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="light" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#panduan-pengguna-modul-presensi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EduPoin Documentation" class="md-header__button md-logo" aria-label="EduPoin Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EduPoin Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Presensi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="dark" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mitrakom/digitalgov-edupoin" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    digitalgov-edupoin
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data-management/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Attendance
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../grading/" class="md-tabs__link">
+          
+  
+  
+  Grading
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../permissions-leave/perizinan/" class="md-tabs__link">
+          
+  
+  
+  Leave & Permissions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../exams/admin/" class="md-tabs__link">
+          
+  
+  
+  Online Exams
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../communications/telegram/" class="md-tabs__link">
+          
+  
+  
+  Communications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../end-of-semester/akhir-semester/" class="md-tabs__link">
+          
+  
+  
+  End of Semester
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../special-roles/orangtua/" class="md-tabs__link">
+          
+  
+  
+  Special Roles
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EduPoin Documentation" class="md-nav__button md-logo" aria-label="EduPoin Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EduPoin Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mitrakom/digitalgov-edupoin" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    digitalgov-edupoin
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-management/siswa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siswa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-management/guru/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guru
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-management/staf-sekolah/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Staf Sekolah
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attendance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Attendance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presensi
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presensi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#daftar-isi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Daftar Isi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-singkat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pengenalan Singkat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan Singkat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-kehadiran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Kehadiran
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefit-menggunakan-modul-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefit Menggunakan Modul Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#akses-modul-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses Modul Presensi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Akses Modul Presensi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cara-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cara Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masuk-ke-halaman-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masuk ke Halaman Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panduan-untuk-guruguru-wali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panduan untuk Guru/Guru Wali
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panduan untuk Guru/Guru Wali">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tahap-1-pilih-jadwal-mengajar-hari-ini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 1: Pilih Jadwal Mengajar Hari Ini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-2-masuk-ke-form-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 2: Masuk ke Form Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-3-tandai-status-kehadiran-siswa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 3: Tandai Status Kehadiran Siswa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-4-gunakan-fitur-shortcut-opsional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 4: Gunakan Fitur Shortcut (Opsional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-5-simpan-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 5: Simpan Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-6-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 6: Selesai!
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panduan-untuk-wali-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panduan untuk Wali Kelas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panduan untuk Wali Kelas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#akses-modul-presensi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses Modul Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-koreksi-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fitur Koreksi Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-wali-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips Wali Kelas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panduan-untuk-kesiswaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panduan untuk Kesiswaan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panduan untuk Kesiswaan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#akses-laporan-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses Laporan Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jenis-laporan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jenis Laporan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jenis Laporan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-laporan-harian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Laporan Harian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-laporan-mingguanbulanan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Laporan Mingguan/Bulanan
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fitur Analisis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panduan-untuk-kepala-sekolah" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panduan untuk Kepala Sekolah
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panduan untuk Kepala Sekolah">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-guru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Guru
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-trik-menggunakan-aplikasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; Trik Menggunakan Aplikasi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Trik Menggunakan Aplikasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gunakan-smartphone-untuk-input-di-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Gunakan Smartphone untuk Input di Kelas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-markdownsort-data-siswa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Markdown/Sort Data Siswa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-batching-input-untuk-banyak-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Batching Input untuk Banyak Kelas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-koreksi-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Koreksi Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-notifikasi-otomatis-ke-orang-tua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Notifikasi Otomatis ke Orang Tua
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pertanyaan-umum-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pertanyaan Umum (FAQ)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pertanyaan Umum (FAQ)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-bagaimana-jika-saya-lupa-input-presensi-saat-jam-pelajaran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1: Bagaimana jika saya lupa input presensi saat jam pelajaran?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-apa-bedanya-status-izin-dan-sakit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2: Apa bedanya status "Izin" dan "Sakit"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-bagaimana-jika-siswa-datang-terlambat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3: Bagaimana jika siswa datang terlambat?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4-apa-itu-status-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4: Apa itu status "Alpha"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-bagaimana-cara-ubah-presensi-yang-sudah-tersimpan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q5: Bagaimana cara ubah presensi yang sudah tersimpan?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6-berapa-waktu-toleransi-untuk-input-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q6: Berapa waktu toleransi untuk input presensi?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q7-apakah-bisa-input-presensi-hari-kemarin-atau-minggu-lalu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q7: Apakah bisa input presensi hari kemarin atau minggu lalu?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q8-apa-yang-terjadi-jika-koneksi-internet-terputus-saat-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q8: Apa yang terjadi jika koneksi internet terputus saat input?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q9-bagaimana-jika-ada-siswa-yang-tidak-ada-di-daftar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q9: Bagaimana jika ada siswa yang tidak ada di daftar?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q10-apakah-presensi-otomatis-sync-dengan-sistem-lain-perizinan-nilai-dll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q10: Apakah presensi otomatis sync dengan sistem lain (perizinan, nilai, dll)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q11-siapa-yang-bisa-melihat-data-presensi-saya" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q11: Siapa yang bisa melihat data presensi saya?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q12-bagaimana-jika-saya-ingin-melihat-laporan-presensi-siswa-tertentu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q12: Bagaimana jika saya ingin melihat laporan presensi siswa tertentu?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q13-apakah-ada-remindernotifikasi-jika-belum-input-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q13: Apakah ada reminder/notifikasi jika belum input presensi?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q14-bagaimana-cara-printexport-laporan-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q14: Bagaimana cara print/export laporan presensi?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q15-siapa-yang-bisa-membantu-jika-ada-masalah-teknis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q15: Siapa yang bisa membantu jika ada masalah teknis?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-workflow-cepat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ringkasan Workflow Cepat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ringkasan Workflow Cepat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#untuk-guruguru-wali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Untuk Guru/Guru Wali
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#untuk-wali-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Untuk Wali Kelas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#untuk-kesiswaankepala-sekolah" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Untuk Kesiswaan/Kepala Sekolah
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saran-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saran &amp; Feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grading
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Grading
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/bank-soal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bank Soal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/tugas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/nilai-akhir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nilai Akhir
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/pembobotan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pembobotan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/modul-ajar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modul Ajar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leave & Permissions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Leave & Permissions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../permissions-leave/perizinan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perizinan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Online Exams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Online Exams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exams/admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exams/guru/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guru
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exams/siswa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siswa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exams/monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communications
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Communications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../communications/telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    End of Semester
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    End of Semester
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../end-of-semester/akhir-semester/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Akhir Semester
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Special Roles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Special Roles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../special-roles/orangtua/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orang Tua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#daftar-isi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Daftar Isi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-singkat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pengenalan Singkat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan Singkat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status-kehadiran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Kehadiran
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefit-menggunakan-modul-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefit Menggunakan Modul Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#akses-modul-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses Modul Presensi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Akses Modul Presensi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cara-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cara Login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masuk-ke-halaman-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masuk ke Halaman Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panduan-untuk-guruguru-wali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panduan untuk Guru/Guru Wali
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panduan untuk Guru/Guru Wali">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tahap-1-pilih-jadwal-mengajar-hari-ini" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 1: Pilih Jadwal Mengajar Hari Ini
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-2-masuk-ke-form-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 2: Masuk ke Form Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-3-tandai-status-kehadiran-siswa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 3: Tandai Status Kehadiran Siswa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-4-gunakan-fitur-shortcut-opsional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 4: Gunakan Fitur Shortcut (Opsional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-5-simpan-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 5: Simpan Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tahap-6-selesai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tahap 6: Selesai!
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panduan-untuk-wali-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panduan untuk Wali Kelas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panduan untuk Wali Kelas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#akses-modul-presensi_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses Modul Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-koreksi-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fitur Koreksi Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-wali-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips Wali Kelas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panduan-untuk-kesiswaan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panduan untuk Kesiswaan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panduan untuk Kesiswaan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#akses-laporan-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses Laporan Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jenis-laporan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jenis Laporan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jenis Laporan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-laporan-harian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Laporan Harian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-laporan-mingguanbulanan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Laporan Mingguan/Bulanan
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fitur-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fitur Analisis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panduan-untuk-kepala-sekolah" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panduan untuk Kepala Sekolah
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Panduan untuk Kepala Sekolah">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Presensi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-guru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring Guru
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-trik-menggunakan-aplikasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips &amp; Trik Menggunakan Aplikasi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips &amp; Trik Menggunakan Aplikasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gunakan-smartphone-untuk-input-di-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Gunakan Smartphone untuk Input di Kelas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-markdownsort-data-siswa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Markdown/Sort Data Siswa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-batching-input-untuk-banyak-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Batching Input untuk Banyak Kelas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-koreksi-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Koreksi Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-notifikasi-otomatis-ke-orang-tua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Notifikasi Otomatis ke Orang Tua
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pertanyaan-umum-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pertanyaan Umum (FAQ)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pertanyaan Umum (FAQ)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-bagaimana-jika-saya-lupa-input-presensi-saat-jam-pelajaran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1: Bagaimana jika saya lupa input presensi saat jam pelajaran?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-apa-bedanya-status-izin-dan-sakit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2: Apa bedanya status "Izin" dan "Sakit"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-bagaimana-jika-siswa-datang-terlambat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3: Bagaimana jika siswa datang terlambat?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4-apa-itu-status-alpha" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q4: Apa itu status "Alpha"?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-bagaimana-cara-ubah-presensi-yang-sudah-tersimpan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q5: Bagaimana cara ubah presensi yang sudah tersimpan?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6-berapa-waktu-toleransi-untuk-input-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q6: Berapa waktu toleransi untuk input presensi?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q7-apakah-bisa-input-presensi-hari-kemarin-atau-minggu-lalu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q7: Apakah bisa input presensi hari kemarin atau minggu lalu?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q8-apa-yang-terjadi-jika-koneksi-internet-terputus-saat-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q8: Apa yang terjadi jika koneksi internet terputus saat input?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q9-bagaimana-jika-ada-siswa-yang-tidak-ada-di-daftar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q9: Bagaimana jika ada siswa yang tidak ada di daftar?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q10-apakah-presensi-otomatis-sync-dengan-sistem-lain-perizinan-nilai-dll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q10: Apakah presensi otomatis sync dengan sistem lain (perizinan, nilai, dll)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q11-siapa-yang-bisa-melihat-data-presensi-saya" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q11: Siapa yang bisa melihat data presensi saya?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q12-bagaimana-jika-saya-ingin-melihat-laporan-presensi-siswa-tertentu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q12: Bagaimana jika saya ingin melihat laporan presensi siswa tertentu?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q13-apakah-ada-remindernotifikasi-jika-belum-input-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q13: Apakah ada reminder/notifikasi jika belum input presensi?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q14-bagaimana-cara-printexport-laporan-presensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q14: Bagaimana cara print/export laporan presensi?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q15-siapa-yang-bisa-membantu-jika-ada-masalah-teknis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q15: Siapa yang bisa membantu jika ada masalah teknis?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ringkasan-workflow-cepat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ringkasan Workflow Cepat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ringkasan Workflow Cepat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#untuk-guruguru-wali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Untuk Guru/Guru Wali
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#untuk-wali-kelas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Untuk Wali Kelas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#untuk-kesiswaankepala-sekolah" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Untuk Kesiswaan/Kepala Sekolah
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saran-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Saran &amp; Feedback
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="panduan-pengguna-modul-presensi">Panduan Pengguna Modul Presensi</h1>
+<p><strong>Versi</strong>: 1.0<br />
+<strong>Untuk</strong>: Guru, Wali Kelas, Kesiswaan, Kepala Sekolah<br />
+<strong>Tanggal</strong>: April 2026<br />
+<strong>Status</strong>: Siap Digunakan</p>
+<hr />
+<h2 id="daftar-isi">📋 Daftar Isi</h2>
+<ol>
+<li><a href="#pengenalan-singkat">Pengenalan Singkat</a></li>
+<li><a href="#akses-modul-presensi">Akses Modul Presensi</a></li>
+<li><a href="#panduan-untuk-guruguru-wali">Panduan untuk Guru/Guru Wali</a></li>
+<li><a href="#panduan-untuk-wali-kelas">Panduan untuk Wali Kelas</a></li>
+<li><a href="#panduan-untuk-kesiswaan">Panduan untuk Kesiswaan</a></li>
+<li><a href="#panduan-untuk-kepala-sekolah">Panduan untuk Kepala Sekolah</a></li>
+<li><a href="#tips--trik-menggunakan-aplikasi">Tips &amp; Trik Menggunakan Aplikasi</a></li>
+<li><a href="#pertanyaan-umum-faq">Pertanyaan Umum (FAQ)</a></li>
+</ol>
+<hr />
+<h2 id="pengenalan-singkat">Pengenalan Singkat</h2>
+<p><strong>Modul Presensi</strong> adalah fitur di EduPoin untuk mencatat kehadiran siswa secara digital. Fitur ini dirancang untuk memudahkan Guru melakukan presensi cepat di kelas dengan tampilan yang sederhana dan responsif di perangkat mobile.</p>
+<h3 id="status-kehadiran">Status Kehadiran</h3>
+<p>Setiap siswa dapat memiliki status sebagai berikut:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Simbol</th>
+<th>Arti</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hadir</strong></td>
+<td>🟢</td>
+<td>Siswa hadir sesuai jadwal</td>
+</tr>
+<tr>
+<td><strong>Sakit</strong></td>
+<td>🟡</td>
+<td>Siswa tidak hadir karena sakit (dengan bukti surat/pemberitahuan orang tua)</td>
+</tr>
+<tr>
+<td><strong>Izin</strong></td>
+<td>🟠</td>
+<td>Siswa tidak hadir atau keluar sekolah karena alasan resmi. Gunakan untuk dua kondisi: <em>(a)</em> siswa izin keluar sementara di tengah hari, atau <em>(b)</em> siswa sama sekali tidak datang ke sekolah karena punya izin resmi (acara keluarga, lomba, dll). Tambahkan keterangan untuk membedakan keduanya.</td>
+</tr>
+<tr>
+<td><strong>Alpha</strong></td>
+<td>🔴</td>
+<td>Siswa tidak hadir tanpa keterangan apapun</td>
+</tr>
+</tbody>
+</table>
+<h3 id="benefit-menggunakan-modul-presensi">Benefit Menggunakan Modul Presensi</h3>
+<p>✓ <strong>Cepat</strong>: Input massal hanya dengan klik radio button per siswa<br />
+✓ <strong>Akurat</strong>: Tidak perlu hafal nama siswa, nama sudah tertera<br />
+✓ <strong>Aman</strong>: Data tersimpan otomatis dengan timestamp<br />
+✓ <strong>Transparan</strong>: Orang tua dapat melihat notifikasi jika siswa tidak hadir<br />
+✓ <strong>Mobile-Friendly</strong>: Bisa digunakan di smartphone bahkan di kelas  </p>
+<hr />
+<h2 id="akses-modul-presensi">Akses Modul Presensi</h2>
+<h3 id="cara-login">Cara Login</h3>
+<ol>
+<li>Buka aplikasi EduPoin di browser</li>
+<li>Masukkan <strong>Username/Email</strong> dan <strong>Password</strong> Anda</li>
+<li>Klik tombol <strong>Login</strong></li>
+</ol>
+<h3 id="masuk-ke-halaman-presensi">Masuk ke Halaman Presensi</h3>
+<p><strong>Untuk Guru/Guru Wali/Wali Kelas:</strong></p>
+<ol>
+<li>Setelah login, akan muncul menu utama</li>
+<li>Cari menu <strong>"Presensi"</strong> di sidebar (menu kiri)</li>
+<li>Klik menu <strong>Presensi</strong></li>
+<li>Anda akan masuk ke halaman input presensi</li>
+</ol>
+<p><strong>Shortcut Direct:</strong>
+- Ketik URL: <code>https://edupoin.sekolah.id/app/presensi</code> (sesuaikan domain)</p>
+<hr />
+<h2 id="panduan-untuk-guruguru-wali">Panduan untuk Guru/Guru Wali</h2>
+<h3 id="tahap-1-pilih-jadwal-mengajar-hari-ini">Tahap 1: Pilih Jadwal Mengajar Hari Ini</h3>
+<p>Ketika pertama kali masuk ke halaman Presensi, Anda akan melihat daftar jadwal mengajar hari ini.</p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────────┐
+│ PILIH JADWAL MENGAJAR HARI INI                         │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│ ┌──────────────────────────────────────────────────┐  │
+│ │ 08:00 - 09:00 Kelas X-A (Matematika)            │  │
+│ │ 26 siswa | Status: ✅ Belum diisi               │  │
+│ │ [KLIK UNTUK MULAI PRESENSI]                     │  │
+│ └──────────────────────────────────────────────────┘  │
+│                                                         │
+│ ┌──────────────────────────────────────────────────┐  │
+│ │ 09:15 - 10:15 Kelas X-B (Matematika)            │  │
+│ │ 28 siswa | Status: ✅ Terisi 14/28              │  │
+│ │ [KLIK UNTUK LIHAT/EDIT]                         │  │
+│ └──────────────────────────────────────────────────┘  │
+│                                                         │
+│ ┌──────────────────────────────────────────────────┐  │
+│ │ 10:30 - 11:30 Kelas X-C (Matematika)            │  │
+│ │ 25 siswa | Status: 🔒 Belum masuk jam            │  │
+│ │ [DISABLED - Tunggu waktu jam pelajaran]         │  │
+│ └──────────────────────────────────────────────────┘  │
+│                                                         │
+│ Jadwal lainnya tidak ditemukan hari ini               │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+</code></pre></div>
+<p><strong>Keterangan Status:</strong></p>
+<ul>
+<li><strong>✅ Belum diisi</strong>: Jam pelajaran sudah masuk, Anda bisa mulai input presensi</li>
+<li><strong>✅ Terisi 14/28</strong>: Sudah ada data presensi, Anda bisa lihat atau edit</li>
+<li><strong>🔒 Belum masuk jam</strong>: Jam pelajaran belum dimulai, tunggu waktu yang tepat</li>
+</ul>
+<p><strong>Aksi</strong>: Klik kartu jadwal untuk membuka form presensi</p>
+<h3 id="tahap-2-masuk-ke-form-presensi">Tahap 2: Masuk ke Form Presensi</h3>
+<p>Setelah klik jadwal, Anda akan masuk ke halaman input presensi dengan tampilan seperti berikut:</p>
+<div class="highlight"><pre><span></span><code>┌──────────────────────────────────────────────────────────┐
+│                                                          │
+│ 📝 INPUT PRESENSI                                       │
+│                                                          │
+│ 08:00 - 09:00 | Kelas X-A | Matematika                │
+│ ──────────────────────────────────────────────────────  │
+│                                                          │
+│ Status Waktu: ✅ Jam Berlangsung (10:25/09:00)         │
+│                                                          │
+│ [🔄 Refresh Daftar Siswa]     [Tutup]                  │
+│                                                          │
+│ ┌──────────────────────────────────────────────────┐  │
+│ │ No │ NISN    │ Nama Siswa         │ Status     │  │
+│ ├────┼─────────┼────────────────────┼────────────┤  │
+│ │ 1  │ 0044444 │ Budi Santoso       │ ⭕ Hadir  │  │
+│ │    │         │                    │ ⚪ Sakit  │  │
+│ │    │         │                    │ ⚪ Izin   │  │
+│ ├────┼─────────┼────────────────────┼────────────┤  │
+│ │ 2  │ 0044445 │ Ani Wijaya         │ ⚪ Hadir  │  │
+│ │    │         │                    │ ⭕ Sakit  │  │
+│ │    │         │                    │ ⚪ Izin   │  │
+│ ├────┼─────────┼────────────────────┼────────────┤  │
+│ │ 3  │ 0044446 │ Chandra Kusuma     │ ⚪ Hadir  │  │
+│ │    │         │                    │ ⚪ Sakit  │  │
+│ │    │         │                    │ ⭕ Izin   │  │
+│ ├────┼─────────┼────────────────────┼────────────┤  │
+│ │ 4  │ 0044447 │ Dewi Rahayu        │ ⭕ Hadir  │  │
+│ │    │         │                    │ ⚪ Sakit  │  │
+│ │    │         │                    │ ⚪ Izin   │  │
+│ ├────┼─────────┼────────────────────┼────────────┤  │
+│ │ 5  │ 0044448 │ Eka Putra Wijaya   │ ⚪ Hadir  │  │
+│ │    │         │                    │ ⚪ Sakit  │  │
+│ │    │         │                    │ ⚪ Izin   │  │
+│ │    │         │ (Alpha - Belum)    │            │  │
+│                                                          │
+│ ┌──────────────────────────────────────────────────┐  │
+│ │ [Mark All: Hadir]  [Mark All: Sakit]  [Reset]  │  │
+│ └──────────────────────────────────────────────────┘  │
+│                                                          │
+│ ┌──────────────────────────────────────────────────┐  │
+│ │ [Batal]                    [💾 Simpan Presensi] │  │
+│ └──────────────────────────────────────────────────┘  │
+│                                                          │
+└──────────────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="tahap-3-tandai-status-kehadiran-siswa">Tahap 3: Tandai Status Kehadiran Siswa</h3>
+<p><strong>Langkah-langkah:</strong></p>
+<ol>
+<li><strong>Untuk setiap siswa</strong>, pilih salah satu status:</li>
+<li><strong>Hadir</strong> (⭕): Klik jika siswa hadir</li>
+<li><strong>Sakit</strong> (⚪): Klik jika siswa tidak hadir karena sakit</li>
+<li><strong>Izin</strong> (⚪): Klik jika siswa tidak hadir atau keluar sekolah karena alasan resmi yang diizinkan — baik izin keluar sementara di tengah hari maupun izin tidak masuk sekolah sama sekali. Tambahkan catatan di kolom <strong>Keterangan</strong> untuk membedakan keduanya.</li>
+<li>
+<p><strong>Tidak dipilih</strong> = <strong>Alpha</strong> (🔴): Otomatis jika tidak ditandai</p>
+</li>
+<li>
+<p><strong>Contoh cara klik:</strong>
+   <div class="highlight"><pre><span></span><code>Siswa &quot;Budi Santoso&quot; → Klik radio button &quot;Hadir&quot;
+Siswa &quot;Ani Wijaya&quot; → Klik radio button &quot;Sakit&quot;
+Siswa &quot;Chandra Kusuma&quot; → Klik radio button &quot;Izin&quot;
+Siswa &quot;Dewi Rahayu&quot; → Klik radio button &quot;Hadir&quot;
+Siswa &quot;Eka Putra Wijaya&quot; → Tidak diklik = Alpha
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="tahap-4-gunakan-fitur-shortcut-opsional">Tahap 4: Gunakan Fitur Shortcut (Opsional)</h3>
+<p><strong>Tombol "Mark All: Hadir"</strong>
+- Klik untuk otomatis menandai <strong>semua siswa sebagai Hadir</strong>
+- Berguna jika seluruh kelas hadir
+- Anda masih bisa edit siswa individual setelahnya</p>
+<p><strong>Tombol "Mark All: Sakit"</strong>
+- Klik untuk otomatis menandai <strong>semua siswa sebagai Sakit</strong>
+- Jarang digunakan, biasanya hanya untuk kelas libur mendadak</p>
+<p><strong>Tombol "Reset"</strong>
+- Klik untuk <strong>membatalkan semua pilihan</strong> dan mulai ulang
+- Status kembali ke kosong (semua Alpha)</p>
+<h3 id="tahap-5-simpan-presensi">Tahap 5: Simpan Presensi</h3>
+<p><strong>Sebelum simpan</strong>, pastikan:
+- ✅ Sudah menandai minimal 1 siswa dengan status
+- ✅ Status waktu menunjukkan "✅ Jam Berlangsung"
+- ✅ Data sudah benar</p>
+<p><strong>Cara simpan:</strong>
+1. Klik tombol <strong>"💾 Simpan Presensi"</strong> (biru/hijau)
+2. Tunggu proses loading (ada animasi loading)
+3. Akan muncul notifikasi sukses: <strong>"✓ Presensi tersimpan (26 siswa)"</strong>
+4. Halaman akan kembali ke daftar jadwal</p>
+<h3 id="tahap-6-selesai">Tahap 6: Selesai!</h3>
+<p>Presensi untuk jam pelajaran tersebut sudah tersimpan dan tidak bisa diubah (kecuali Wali Kelas melakukan koreksi).</p>
+<p><strong>Untuk jam berikutnya</strong>, ulangi dari Tahap 1 dengan jadwal berikutnya.</p>
+<hr />
+<h2 id="panduan-untuk-wali-kelas">Panduan untuk Wali Kelas</h2>
+<h3 id="akses-modul-presensi_1">Akses Modul Presensi</h3>
+<p>Wali Kelas memiliki akses khusus untuk melakukan <strong>koreksi/verifikasi</strong> presensi kelas mereka.</p>
+<p><strong>Bagian Khusus Wali Kelas:</strong></p>
+<ol>
+<li>Masuk ke menu <strong>Presensi → Verifikasi Presensi</strong></li>
+<li>Pilih kelas yang Anda tandai wali</li>
+<li>Pilih tanggal yang ingin diverifikasi</li>
+<li>Sistem akan menampilkan daftar presensi dari hari tersebut</li>
+</ol>
+<h3 id="fitur-koreksi-presensi">Fitur Koreksi Presensi</h3>
+<p>Sebagai Wali Kelas, Anda bisa:</p>
+<div class="highlight"><pre><span></span><code>┌──────────────────────────────────────────────────┐
+│ VERIFIKASI PRESENSI KELAS X-A                   │
+│ Tanggal: Senin, 14 April 2026                   │
+├──────────────────────────────────────────────────┤
+│                                                  │
+│ Jam 1 (08:00-09:00) - Matematika                │
+│ ├─ Budi Santoso: Hadir ✅ [Edit]                │
+│ ├─ Ani Wijaya: Sakit ✅ [Edit]                  │
+│ ├─ Chandra Kusuma: Izin ✅ [Edit]               │
+│ ├─ Dewi Rahayu: Hadir ✅ [Edit]                 │
+│ └─ Eka Putra Wijaya: Alpha ⚠️ [Edit]            │
+│                                                  │
+│ Jam 2 (09:15-10:15) - Bahasa Inggris            │
+│ ├─ Budi Santoso: Hadir ✅ [Edit]                │
+│ └─ ...                                          │
+│                                                  │
+└──────────────────────────────────────────────────┘
+</code></pre></div>
+<p><strong>Cara Edit:</strong>
+1. Klik tombol <strong>[Edit]</strong> pada siswa yang ingin diubah
+2. Pilih status yang benar
+3. Klik <strong>Simpan Perubahan</strong>
+4. Notifikasi akan muncul: <strong>"✓ Presensi diperbarui"</strong></p>
+<h3 id="tips-wali-kelas">Tips Wali Kelas</h3>
+<ul>
+<li><strong>Periksa Alpha</strong>: Perhatikan siswa dengan status Alpha (🔴). Jika ada yang harusnya Izin/Sakit, lakukan koreksi</li>
+<li><strong>Periksa Izin</strong>: Bandingkan dengan data di modul Perizinan untuk memastikan akurasi</li>
+<li><strong>Laporan Harian</strong>: Setiap akhir hari, review presensi kelas Anda untuk memastikan semua benar</li>
+</ul>
+<hr />
+<h2 id="panduan-untuk-kesiswaan">Panduan untuk Kesiswaan</h2>
+<h3 id="akses-laporan-presensi">Akses Laporan Presensi</h3>
+<p>Kesiswaan dapat melihat laporan presensi keseluruhan untuk keperluan monitoring dan analisis.</p>
+<p><strong>Cara Akses:</strong></p>
+<ol>
+<li>Masuk menu <strong>Presensi → Laporan Rekapitulasi</strong></li>
+<li>Pilih <strong>Rentang Tanggal</strong> (mulai - selesai)</li>
+<li>Pilih <strong>Kelas</strong> (opsional) atau Semua Kelas</li>
+<li>Klik <strong>Tampilkan Laporan</strong></li>
+</ol>
+<h3 id="jenis-laporan">Jenis Laporan</h3>
+<h4 id="1-laporan-harian">1. Laporan Harian</h4>
+<div class="highlight"><pre><span></span><code>┌────────────────────────────────────────────────────┐
+│ LAPORAN PRESENSI HARIAN                           │
+│ Tanggal: Senin, 14 April 2026                    │
+├────────────────────────────────────────────────────┤
+│                                                    │
+│ Total Siswa: 512                                 │
+│ ├─ Hadir: 480 (93.8%) 🟢                         │
+│ ├─ Sakit: 18 (3.5%) 🟡                           │
+│ ├─ Izin: 10 (1.9%) 🟠                            │
+│ └─ Alpha: 4 (0.8%) 🔴                            │
+│                                                    │
+│ Breakdown per Kelas:                             │
+│ ├─ X-A: 26 siswa, 25 hadir (96%), 1 alpha       │
+│ ├─ X-B: 28 siswa, 26 hadir (92%), 2 alpha       │
+│ └─ X-C: 25 siswa, 24 hadir (96%), 1 alpha       │
+│                                                    │
+└────────────────────────────────────────────────────┘
+</code></pre></div>
+<p><strong>Fitur Export:</strong>
+- Klik <strong>"📥 Export ke Excel"</strong> untuk download laporan
+- File akan otomatis tersimpan di perangkat Anda</p>
+<h4 id="2-laporan-mingguanbulanan">2. Laporan Mingguan/Bulanan</h4>
+<div class="highlight"><pre><span></span><code>┌────────────────────────────────────────────────────┐
+│ LAPORAN PRESENSI MINGGUAN                         │
+│ Periode: 7-13 April 2026                         │
+├────────────────────────────────────────────────────┤
+│                                                    │
+│ Tren Kehadiran:                                  │
+│ ├─ Senin (7 Apr):    470/512 (91.8%)             │
+│ ├─ Selasa (8 Apr):   485/512 (94.7%)             │
+│ ├─ Rabu (9 Apr):     495/512 (96.6%)             │
+│ ├─ Kamis (10 Apr):   488/512 (95.3%)             │
+│ └─ Jumat (11 Apr):   480/512 (93.7%)             │
+│                                                    │
+│ Top 5 Siswa Alpha:                               │
+│ 1. Eka Putra Wijaya (X-A): 3 hari                │
+│ 2. Farah Nur Azizah (X-B): 2 hari                │
+│ 3. ...                                           │
+│                                                    │
+└────────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="fitur-analisis">Fitur Analisis</h3>
+<p><strong>Filter dan Sorting:</strong>
+- Filter berdasarkan <strong>Kelas</strong>, <strong>Tanggal</strong>, <strong>Status Kehadiran</strong>
+- Urutkan berdasarkan <strong>Nama Siswa</strong>, <strong>Jumlah Alpha</strong>, <strong>Persentase Hadir</strong></p>
+<p><strong>Lihat Detail Siswa:</strong>
+- Klik nama siswa untuk melihat detail presensinya (per hari, per jam)</p>
+<hr />
+<h2 id="panduan-untuk-kepala-sekolah">Panduan untuk Kepala Sekolah</h2>
+<h3 id="dashboard-presensi">Dashboard Presensi</h3>
+<p>Kepala Sekolah dapat melihat ringkasan presensi sekolah di dashboard utama.</p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────┐
+│ 📊 RINGKASAN PRESENSI HARI INI                     │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│ Hadir: 480 siswa (93.8%)     │ 🟢 Grafik OK       │
+│ Sakit: 18 siswa (3.5%)       │                     │
+│ Izin: 10 siswa (1.9%)        │                     │
+│ Alpha: 4 siswa (0.8%)        │ ⚠️ Perlu Perhatian  │
+│                                                     │
+│ Guru yg Belum Input Presensi:                      │
+│ ├─ Hari Sih (Kelas XI-A)                          │
+│ ├─ Budi Hartanto (Kelas X-C)                      │
+│ └─ ... (3 guru lainnya)                           │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="monitoring-guru">Monitoring Guru</h3>
+<p>Kepala Sekolah dapat melihat kinerja guru dalam input presensi:</p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────┐
+│ MONITORING KINERJA GURU                            │
+│ (Evaluasi berdasarkan ketepatan waktu input)       │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│ Guru yang Konsisten Input Tepat Waktu:             │
+│ ✅ Budi Hartanto (Matematika): 98% tepat waktu    │
+│ ✅ Siti Nurhaliza (IPA): 96% tepat waktu          │
+│ ✅ Ahmad Susilo (Bahasa Inggris): 94% tepat waktu │
+│                                                     │
+│ Guru yang Perlu Diingatkan:                        │
+│ ⚠️ Hari Sih (PKn): 60% terlambat                  │
+│ ⚠️ Rini Handayani (Seni): 50% terlambat          │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+</code></pre></div>
+<p><strong>Aksi:</strong>
+- Klik nama guru untuk melihat detail history input
+- Gunakan data ini untuk evaluasi kinerja guru secara berkala</p>
+<hr />
+<h2 id="tips-trik-menggunakan-aplikasi">Tips &amp; Trik Menggunakan Aplikasi</h2>
+<h3 id="1-gunakan-smartphone-untuk-input-di-kelas">1. Gunakan Smartphone untuk Input di Kelas</h3>
+<p><strong>Keuntungan:</strong>
+- Lebih fleksibel bergerak di kelas
+- Tidak perlu ke kantor dulu
+- Real-time bisa lihat daftar siswa</p>
+<p><strong>Tips:</strong>
+- Gunakan koneksi WiFi yang stabil
+- Jangan lupa lock screen jika meninggalkan hp
+- Pastikan battery cukup sebelum jam pelajaran</p>
+<h3 id="2-markdownsort-data-siswa">2. Markdown/Sort Data Siswa</h3>
+<p><strong>Jika ada siswa yang belum datang:</strong>
+- Jangan langsung klik Alpha
+- Tunggu 5-10 menit untuk siswa yang terlambat
+- Gunakan fitur "Refresh Daftar Siswa" jika ada perubahan (siswa masuk/keluar)</p>
+<h3 id="3-batching-input-untuk-banyak-kelas">3. Batching Input untuk Banyak Kelas</h3>
+<p><strong>Skenario:</strong> Anda mengajar 5 kelas sehari</p>
+<p><strong>Cara Efisien:</strong>
+1. Masuk jam 1: Input Kelas X-A
+2. Masuk jam 2: Input Kelas X-B (buka form baru)
+3. Jangan membuka lebih dari 2 form sekaligus (bisa error)</p>
+<h3 id="4-koreksi-data">4. Koreksi Data</h3>
+<p><strong>Jika salah input:</strong>
+- <strong>Sebagai Guru</strong>: Hubungi Wali Kelas atau Kesiswaan untuk koreksi
+- <strong>Sebagai Wali Kelas</strong>: Gunakan fitur "Edit" di menu Verifikasi Presensi</p>
+<p><strong>Jangan:</strong>
+- ❌ Menghapus data presensi sendiri
+- ❌ Menginput presensi hari lalu (sudah locked)</p>
+<h3 id="5-notifikasi-otomatis-ke-orang-tua">5. Notifikasi Otomatis ke Orang Tua</h3>
+<p><strong>Bagaimana cara kerjanya:</strong>
+- Jika siswa <strong>Alpha</strong> (tidak hadir), sistem otomatis kirim notifikasi Telegram ke orang tua
+- Notifikasi hanya dikirim <strong>jika tidak ada data Izin/Sakit</strong> di sistem perizinan
+- Notifikasi dikirim <strong>saat jam pelajaran selesai</strong></p>
+<p><strong>Tips:</strong>
+- Pastikan orang tua sudah terdaftar nomor Telegram di sistem
+- Jika orang tua tidak terima notifikasi, hubungi TU untuk verifikasi nomor Telegram</p>
+<hr />
+<h2 id="pertanyaan-umum-faq">Pertanyaan Umum (FAQ)</h2>
+<h3 id="q1-bagaimana-jika-saya-lupa-input-presensi-saat-jam-pelajaran">Q1: Bagaimana jika saya lupa input presensi saat jam pelajaran?</h3>
+<p><strong>A:</strong> 
+- Jika belum melampaui jam selesai: Anda masih bisa input dengan klik jadwal tersebut
+- Jika sudah melampaui jam selesai: Form akan terkunci, hubungi <strong>Wali Kelas</strong> atau <strong>Kesiswaan</strong> untuk meminta bantuan input</p>
+<h3 id="q2-apa-bedanya-status-izin-dan-sakit">Q2: Apa bedanya status "Izin" dan "Sakit"?</h3>
+<p><strong>A:</strong>
+- <strong>Izin</strong>: Siswa tidak hadir atau keluar sekolah karena <strong>alasan resmi yang diizinkan</strong>. Status ini mencakup dua kondisi:
+  - <em>(a)</em> <strong>Izin keluar sementara</strong>: Siswa masuk sekolah, tapi di tengah hari izin keluar (misalnya: ke dokter, mengikuti lomba di luar kota, keperluan mendesak). Biasanya ada data di modul Perizinan BK.
+  - <em>(b)</em> <strong>Izin tidak masuk sekolah</strong>: Siswa sama sekali tidak datang ke sekolah pada hari itu karena punya izin resmi (misalnya: acara keluarga, pernikahan saudara, mengikuti perlombaan). Ada surat atau pemberitahuan dari orang tua.
+- <strong>Sakit</strong>: Siswa tidak bisa hadir karena sakit. Bisa dengan surat dokter atau pemberitahuan orang tua melalui WhatsApp/telepon.</p>
+<p><strong>Tips menggunakan field Keterangan:</strong>
+- Izin keluar sementara → tulis <code>"Keluar: periksa dokter pukul 10:00"</code>
+- Izin tidak sekolah → tulis <code>"Tidak masuk: menghadiri acara pernikahan saudara"</code>
+- Sakit → tulis <code>"Sakit demam, ada surat dokter"</code> (opsional)</p>
+<h3 id="q3-bagaimana-jika-siswa-datang-terlambat">Q3: Bagaimana jika siswa datang terlambat?</h3>
+<p><strong>A:</strong>
+- Tetap input status "<strong>Hadir</strong>"
+- Sistem tidak membedakan hadir tepat waktu atau terlambat (evaluasi terpisah di modul lain)
+- Catat waktu datang jika diperlukan di field <strong>Keterangan</strong> (opsional)</p>
+<h3 id="q4-apa-itu-status-alpha">Q4: Apa itu status "Alpha"?</h3>
+<p><strong>A:</strong>
+- <strong>Alpha</strong> = siswa tidak hadir tanpa keterangan apapun
+- Jika Anda tidak menandai status siswa, sistem otomatis set ke Alpha
+- Status Alpha akan <strong>memicu notifikasi Telegram</strong> ke orang tua siswa</p>
+<h3 id="q5-bagaimana-cara-ubah-presensi-yang-sudah-tersimpan">Q5: Bagaimana cara ubah presensi yang sudah tersimpan?</h3>
+<p><strong>A:</strong>
+- <strong>Sebagai Guru</strong>: Tidak bisa mengubah sendiri. Hubungi Wali Kelas atau Kesiswaan
+- <strong>Sebagai Wali Kelas</strong>: Masuk menu <strong>Presensi → Verifikasi Presensi</strong>, cari siswa, klik <strong>[Edit]</strong>, ubah status, simpan</p>
+<h3 id="q6-berapa-waktu-toleransi-untuk-input-presensi">Q6: Berapa waktu toleransi untuk input presensi?</h3>
+<p><strong>A:</strong>
+- Presensi bisa diisi <strong>5 menit sebelum</strong> jam pelajaran dimulai hingga <strong>5 menit setelah</strong> jam selesai
+- Contoh: Jam 08:00-09:00, Anda bisa input antara 07:55-09:05
+- Setelah itu, form akan <strong>terkunci</strong> dan hanya Wali Kelas yang bisa edit</p>
+<h3 id="q7-apakah-bisa-input-presensi-hari-kemarin-atau-minggu-lalu">Q7: Apakah bisa input presensi hari kemarin atau minggu lalu?</h3>
+<p><strong>A:</strong>
+- <strong>TIDAK</strong>, sistem tidak memperbolehkan input presensi hari-hari yang sudah lewat
+- Alasan: Untuk menjaga integritas data dan transparansi
+- Jika ada kesalahan, hubungi <strong>Wali Kelas</strong> atau <strong>Kesiswaan</strong> untuk koreksi</p>
+<h3 id="q8-apa-yang-terjadi-jika-koneksi-internet-terputus-saat-input">Q8: Apa yang terjadi jika koneksi internet terputus saat input?</h3>
+<p><strong>A:</strong>
+- Jika terputus <strong>sebelum klik "Simpan"</strong>: Data tidak tersimpan, ulangi dari awal
+- Jika terputus <strong>saat sedang menyimpan</strong>: Tunggu koneksi pulih, cek apakah sudah tersimpan
+- <strong>Tip</strong>: Pastikan koneksi WiFi stabil sebelum mulai input</p>
+<h3 id="q9-bagaimana-jika-ada-siswa-yang-tidak-ada-di-daftar">Q9: Bagaimana jika ada siswa yang tidak ada di daftar?</h3>
+<p><strong>A:</strong>
+- Kontak <strong>TU (Tata Usaha)</strong> untuk verifikasi
+- Kemungkinan: Siswa baru, belum terdaftar di kelas, atau status non-aktif
+- <strong>Jangan</strong> input data siswa sendiri</p>
+<h3 id="q10-apakah-presensi-otomatis-sync-dengan-sistem-lain-perizinan-nilai-dll">Q10: Apakah presensi otomatis sync dengan sistem lain (perizinan, nilai, dll)?</h3>
+<p><strong>A:</strong>
+- <strong>Ya</strong>, sistem terintegrasi:
+  - Status <strong>Alpha</strong> → Trigger notifikasi Telegram (jika tidak ada Izin/Sakit)
+  - Status <strong>Izin</strong> → Cocok dengan data di modul Perizinan
+  - Presensi otomatis masuk <strong>Laporan Kehadiran Tahunan</strong>
+- Proses sync berjalan otomatis, tidak perlu action manual</p>
+<h3 id="q11-siapa-yang-bisa-melihat-data-presensi-saya">Q11: Siapa yang bisa melihat data presensi saya?</h3>
+<p><strong>A:</strong>
+- <strong>Guru yang input</strong>: Hanya presensi kelas yang dia ajar
+- <strong>Wali Kelas</strong>: Semua presensi kelas yang dia tandai
+- <strong>Kesiswaan</strong>: Laporan rekapitulasi (tidak detail per guru)
+- <strong>Kepala Sekolah</strong>: Dashboard ringkasan dan monitoring guru
+- <strong>Orang Tua</strong>: Hanya notifikasi (jika siswa Alpha)</p>
+<h3 id="q12-bagaimana-jika-saya-ingin-melihat-laporan-presensi-siswa-tertentu">Q12: Bagaimana jika saya ingin melihat laporan presensi siswa tertentu?</h3>
+<p><strong>A:</strong></p>
+<p><strong>Untuk Guru:</strong>
+- Masuk <strong>Presensi → History Presensi</strong>
+- Pilih siswa dan tanggal
+- Lihat detail presensi per hari</p>
+<p><strong>Untuk Wali Kelas:</strong>
+- Masuk <strong>Presensi → Verifikasi Presensi</strong>
+- Pilih siswa untuk melihat history kehadiran</p>
+<p><strong>Untuk Kesiswaan/Kepala Sekolah:</strong>
+- Masuk <strong>Presensi → Laporan Rekapitulasi</strong>
+- Filter berdasarkan siswa/kelas/tanggal</p>
+<h3 id="q13-apakah-ada-remindernotifikasi-jika-belum-input-presensi">Q13: Apakah ada reminder/notifikasi jika belum input presensi?</h3>
+<p><strong>A:</strong>
+- <strong>Belum ada</strong> di versi ini
+- <strong>Workaround</strong>: Buat reminder sendiri di kalender/alarm hp
+- <strong>Rencana</strong>: Fitur reminder akan ditambahkan di update mendatang</p>
+<h3 id="q14-bagaimana-cara-printexport-laporan-presensi">Q14: Bagaimana cara print/export laporan presensi?</h3>
+<p><strong>A:</strong></p>
+<p><strong>Export ke Excel:</strong>
+- Masuk <strong>Presensi → Laporan Rekapitulasi</strong>
+- Klik tombol <strong>"📥 Export ke Excel"</strong>
+- File akan download ke perangkat Anda</p>
+<p><strong>Print:</strong>
+- Buka file Excel yang sudah di-export
+- Gunakan fitur Print di Excel (Ctrl+P)</p>
+<h3 id="q15-siapa-yang-bisa-membantu-jika-ada-masalah-teknis">Q15: Siapa yang bisa membantu jika ada masalah teknis?</h3>
+<p><strong>A:</strong></p>
+<p><strong>Masalah Umum:</strong>
+- Hubungi <strong>TU (Tata Usaha)</strong> atau <strong>Admin Sistem</strong></p>
+<p><strong>Masalah Perlu Koreksi Data:</strong>
+- Hubungi <strong>Wali Kelas</strong> (untuk koreksi presensi) atau <strong>Kesiswaan</strong> (untuk approval)</p>
+<p><strong>Masalah Server/Aplikasi Error:</strong>
+- Hubungi <strong>Tim IT/Developer</strong> dengan screenshot error</p>
+<p><strong>Kontak Darurat:</strong>
+<div class="highlight"><pre><span></span><code>Helpdesk: helpdesk@sekolah.id
+atau
+WhatsApp: 0812-XXXX-XXXX (TU/Admin)
+</code></pre></div></p>
+<hr />
+<h2 id="ringkasan-workflow-cepat">Ringkasan Workflow Cepat</h2>
+<h3 id="untuk-guruguru-wali">Untuk Guru/Guru Wali</h3>
+<div class="highlight"><pre><span></span><code>1. Login → 2. Buka Menu Presensi → 3. Pilih Jadwal Hari Ini
+   ↓
+4. Tandai Status Setiap Siswa (Hadir/Sakit/Izin)
+   ↓
+5. Klik &quot;Simpan Presensi&quot; → 6. Tunggu Notifikasi Sukses
+   ↓
+7. ✅ Selesai, lanjut jam pelajaran berikutnya
+</code></pre></div>
+<h3 id="untuk-wali-kelas">Untuk Wali Kelas</h3>
+<div class="highlight"><pre><span></span><code>1. Login → 2. Buka Menu Presensi → 3. Pilih Verifikasi Presensi
+   ↓
+4. Pilih Kelas dan Tanggal → 5. Review Daftar Presensi
+   ↓
+6. Jika ada yang salah → Klik [Edit] → Ubah Status → Simpan
+   ↓
+7. ✅ Selesai, presensi terverifikasi
+</code></pre></div>
+<h3 id="untuk-kesiswaankepala-sekolah">Untuk Kesiswaan/Kepala Sekolah</h3>
+<div class="highlight"><pre><span></span><code>1. Login → 2. Buka Menu Presensi → 3. Pilih Laporan Rekapitulasi
+   ↓
+4. Atur Filter (Tanggal/Kelas) → 5. Klik Tampilkan Laporan
+   ↓
+6. Analisis Data → Ambil Action jika perlu
+   ↓
+7. Export ke Excel jika diperlukan
+</code></pre></div>
+<hr />
+<h2 id="saran-feedback">Saran &amp; Feedback</h2>
+<p>Jika Anda memiliki saran atau menemukan bug/error saat menggunakan Modul Presensi:</p>
+<p><strong>Kirim ke:</strong>
+- Email: support@edupoin.id
+- Form: Di halaman Presensi → klik "❓ Lapor Masalah"</p>
+<p><strong>Berikan informasi:</strong>
+- Apa yang terjadi (deskripsi)
+- Screenshot jika ada error
+- Perangkat apa yang digunakan (PC/Smartphone)
+- Browser apa (Chrome/Safari/Firefox)</p>
+<hr />
+<p><strong>Terima kasih telah menggunakan Modul Presensi EduPoin!</strong></p>
+<p>Jika ada pertanyaan, silakan hubungi TU atau Admin Sistem.</p>
+<p>Happy Presensi! 📋✨</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

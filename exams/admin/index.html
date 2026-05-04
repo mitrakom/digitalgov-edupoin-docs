@@ -1,0 +1,3626 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Panduan Lengkap Penggunaan Sistem Manajemen Sekolah EduPoin">
+      
+      
+        <meta name="author" content="Tim EduPoin">
+      
+      
+        <link rel="canonical" href="https://mitrakom.github.io/digitalgov-edupoin-docs/exams/admin/">
+      
+      
+        <link rel="prev" href="../../permissions-leave/perizinan/">
+      
+      
+        <link rel="next" href="../guru/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Admin - EduPoin Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="light" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#panduan-modul-ujian-online-setup-konfigurasi-admin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EduPoin Documentation" class="md-header__button md-logo" aria-label="EduPoin Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EduPoin Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Admin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="dark" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mitrakom/digitalgov-edupoin" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    digitalgov-edupoin
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data-management/" class="md-tabs__link">
+          
+  
+  
+  Data Management
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../attendance/presensi/" class="md-tabs__link">
+          
+  
+  
+  Attendance
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../grading/" class="md-tabs__link">
+          
+  
+  
+  Grading
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../permissions-leave/perizinan/" class="md-tabs__link">
+          
+  
+  
+  Leave & Permissions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Online Exams
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../communications/telegram/" class="md-tabs__link">
+          
+  
+  
+  Communications
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../end-of-semester/akhir-semester/" class="md-tabs__link">
+          
+  
+  
+  End of Semester
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../special-roles/orangtua/" class="md-tabs__link">
+          
+  
+  
+  Special Roles
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EduPoin Documentation" class="md-nav__button md-logo" aria-label="EduPoin Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EduPoin Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mitrakom/digitalgov-edupoin" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    digitalgov-edupoin
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Management
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Management
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-management/siswa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siswa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-management/guru/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guru
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-management/staf-sekolah/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Staf Sekolah
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attendance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Attendance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../attendance/presensi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Presensi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grading
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Grading
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/bank-soal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bank Soal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/tugas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/nilai-akhir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nilai Akhir
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/pembobotan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pembobotan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../grading/modul-ajar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modul Ajar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Leave & Permissions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Leave & Permissions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../permissions-leave/perizinan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perizinan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Online Exams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Online Exams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#daftar-isi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Daftar Isi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-singkat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pengenalan Singkat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan Singkat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-ujian-online-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apa itu Ujian Online Admin?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#siapa-yang-menggunakan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Siapa yang Menggunakan?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#akses-panel-admin-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses Panel Admin Ujian
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Akses Panel Admin Ujian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-admin-ujian-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Admin Ujian Online
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-awal-first-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Awal (First Time)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup Awal (First Time)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist-setup-awal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist Setup Awal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-verifikasi-data-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 1: Verifikasi Data Master
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Langkah 1: Verifikasi Data Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#periksa-data-guru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Periksa Data Guru
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periksa-data-siswa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Periksa Data Siswa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periksa-data-kelas-mata-pelajaran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Periksa Data Kelas &amp; Mata Pelajaran
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-konfigurasi-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 2: Konfigurasi Permissions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Langkah 2: Konfigurasi Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#akses-permissions-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses "Permissions &amp; Roles"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-vs-permission-contoh-standar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role vs Permission (Contoh Standar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-3-setup-parameter-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 3: Setup Parameter Global
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Langkah 3: Setup Parameter Global">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#akses-setting-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses "Setting Global"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-4-import-bank-soal-opsional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 4: Import Bank Soal (Opsional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-5-create-ujian-pilottesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 5: Create Ujian Pilot/Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-6-8-training-testing-go-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 6-8: Training, Testing, Go Live
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kelola-master-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kelola Master Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kelola Master Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guru-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guru Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guru Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lihat-daftar-guru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lihat Daftar Guru
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tambah-guru-baru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tambah Guru Baru
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editdelete-guru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit/Delete Guru
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-guru-dari-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Guru dari Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#siswa-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Siswa Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kelas-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kelas Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mata-pelajaran-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mata Pelajaran Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfigurasi-sistem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfigurasi Sistem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Konfigurasi Sistem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ujian-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ujian Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-laporan-sistem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring &amp; Laporan Sistem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring &amp; Laporan Sistem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lihat-semua-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lihat Semua Ujian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistik-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistik Ujian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laporan-nilai-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laporan Nilai Ujian
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting &amp; Maintenance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting &amp; Maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleanup-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cleanup Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activity Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Health Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pertanyaan-umum-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pertanyaan Umum (FAQ)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pertanyaan Umum (FAQ)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-bagaimana-jika-ada-kesalahan-data-guru-di-master-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Bagaimana jika ada kesalahan data guru di master data?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-berapa-sering-saya-harus-backup-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Berapa sering saya harus backup database?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-bagaimana-jika-server-lambat-saat-ujian-berlangsung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Bagaimana jika server lambat saat ujian berlangsung?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-dapatkah-saya-reset-password-gurusiswa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Dapatkah saya reset password guru/siswa?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-bagaimana-jika-guru-lupa-cara-buat-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Bagaimana jika guru lupa cara buat ujian?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-dapatkah-saya-export-laporan-ke-format-berbeda-pdf-csv-dll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Dapatkah saya export laporan ke format berbeda (PDF, CSV, dll)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-bagaimana-backup-restore-jika-ada-disaster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Bagaimana backup &amp; restore jika ada disaster?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bantuan-dukungan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆘 Bantuan &amp; Dukungan
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guru/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guru
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../siswa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Siswa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Communications
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Communications
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../communications/telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    End of Semester
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    End of Semester
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../end-of-semester/akhir-semester/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Akhir Semester
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Special Roles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Special Roles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../special-roles/orangtua/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orang Tua
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#daftar-isi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Daftar Isi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pengenalan-singkat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pengenalan Singkat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pengenalan Singkat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apa-itu-ujian-online-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Apa itu Ujian Online Admin?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#siapa-yang-menggunakan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Siapa yang Menggunakan?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#akses-panel-admin-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses Panel Admin Ujian
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Akses Panel Admin Ujian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-admin-ujian-online" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Admin Ujian Online
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-awal-first-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Awal (First Time)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup Awal (First Time)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist-setup-awal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist Setup Awal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-1-verifikasi-data-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 1: Verifikasi Data Master
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Langkah 1: Verifikasi Data Master">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#periksa-data-guru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Periksa Data Guru
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periksa-data-siswa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Periksa Data Siswa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#periksa-data-kelas-mata-pelajaran" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Periksa Data Kelas &amp; Mata Pelajaran
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-2-konfigurasi-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 2: Konfigurasi Permissions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Langkah 2: Konfigurasi Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#akses-permissions-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses "Permissions &amp; Roles"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-vs-permission-contoh-standar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role vs Permission (Contoh Standar)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-3-setup-parameter-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 3: Setup Parameter Global
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Langkah 3: Setup Parameter Global">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#akses-setting-global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Akses "Setting Global"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-4-import-bank-soal-opsional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 4: Import Bank Soal (Opsional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-5-create-ujian-pilottesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 5: Create Ujian Pilot/Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#langkah-6-8-training-testing-go-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Langkah 6-8: Training, Testing, Go Live
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kelola-master-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kelola Master Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kelola Master Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guru-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guru Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guru Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lihat-daftar-guru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lihat Daftar Guru
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tambah-guru-baru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tambah Guru Baru
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editdelete-guru" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit/Delete Guru
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-guru-dari-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import Guru dari Excel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#siswa-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Siswa Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kelas-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kelas Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mata-pelajaran-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mata Pelajaran Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfigurasi-sistem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konfigurasi Sistem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Konfigurasi Sistem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ujian-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ujian Template
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-laporan-sistem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring &amp; Laporan Sistem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring &amp; Laporan Sistem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lihat-semua-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lihat Semua Ujian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistik-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Statistik Ujian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#laporan-nilai-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laporan Nilai Ujian
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting &amp; Maintenance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting &amp; Maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#backup-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cleanup-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cleanup Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Activity Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-health-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Health Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pertanyaan-umum-faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pertanyaan Umum (FAQ)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pertanyaan Umum (FAQ)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q-bagaimana-jika-ada-kesalahan-data-guru-di-master-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Bagaimana jika ada kesalahan data guru di master data?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-berapa-sering-saya-harus-backup-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Berapa sering saya harus backup database?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-bagaimana-jika-server-lambat-saat-ujian-berlangsung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Bagaimana jika server lambat saat ujian berlangsung?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-dapatkah-saya-reset-password-gurusiswa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Dapatkah saya reset password guru/siswa?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-bagaimana-jika-guru-lupa-cara-buat-ujian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Bagaimana jika guru lupa cara buat ujian?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-dapatkah-saya-export-laporan-ke-format-berbeda-pdf-csv-dll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Dapatkah saya export laporan ke format berbeda (PDF, CSV, dll)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-bagaimana-backup-restore-jika-ada-disaster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q: Bagaimana backup &amp; restore jika ada disaster?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bantuan-dukungan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆘 Bantuan &amp; Dukungan
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="panduan-modul-ujian-online-setup-konfigurasi-admin">Panduan Modul Ujian Online - Setup &amp; Konfigurasi Admin</h1>
+<p><strong>Versi</strong>: 1.0<br />
+<strong>Untuk</strong>: Administrator, Tata Usaha, Kepala Sekolah (Setup &amp; Konfigurasi)<br />
+<strong>Tanggal</strong>: April 2026<br />
+<strong>Status</strong>: Siap Digunakan</p>
+<hr />
+<h2 id="daftar-isi">📋 Daftar Isi</h2>
+<ol>
+<li><a href="#pengenalan-singkat">Pengenalan Singkat</a></li>
+<li><a href="#akses-panel-admin-ujian">Akses Panel Admin Ujian</a></li>
+<li><a href="#setup-awal-first-time">Setup Awal (First Time)</a></li>
+<li><a href="#kelola-master-data">Kelola Master Data</a></li>
+<li><a href="#konfigurasi-sistem">Konfigurasi Sistem</a></li>
+<li><a href="#monitoring--laporan-sistem">Monitoring &amp; Laporan Sistem</a></li>
+<li><a href="#troubleshooting--maintenance">Troubleshooting &amp; Maintenance</a></li>
+<li><a href="#pertanyaan-umum-faq">Pertanyaan Umum (FAQ)</a></li>
+</ol>
+<hr />
+<h2 id="pengenalan-singkat">Pengenalan Singkat</h2>
+<h3 id="apa-itu-ujian-online-admin">Apa itu Ujian Online Admin?</h3>
+<p><strong>Admin Panel Ujian Online</strong> adalah backend untuk:</p>
+<ul>
+<li>⚙️ <strong>Konfigurasi Sistem</strong> — Setup parameter ujian global (bobot default, max attempt, durasi default, dll)</li>
+<li>📚 <strong>Kelola Master Data</strong> — CRUD data referensi (Guru, Siswa, Kelas, Mata Pelajaran, Semester, Bank Soal)</li>
+<li>👥 <strong>Kelola Permissions</strong> — Atur siapa bisa akses apa (Guru, Wali Kelas, BK, Kepala Sekolah)</li>
+<li>📊 <strong>Monitoring Sistem</strong> — Lihat statistik ujian, logs, performa</li>
+<li>🔧 <strong>Maintenance</strong> — Backup data, cleanup, update settings</li>
+<li>📋 <strong>Laporan Sekolah</strong> — Generate laporan nilai ujian untuk keperluan administrasi</li>
+</ul>
+<h3 id="siapa-yang-menggunakan">Siapa yang Menggunakan?</h3>
+<table>
+<thead>
+<tr>
+<th>Peran</th>
+<th>Fokus</th>
+<th>Akses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Admin Sistem</strong></td>
+<td>Setup teknis, monitoring, maintenance</td>
+<td>Full</td>
+</tr>
+<tr>
+<td><strong>Tata Usaha (TU)</strong></td>
+<td>Data master, laporan, backup</td>
+<td>Partial (data management)</td>
+</tr>
+<tr>
+<td><strong>Kepala Sekolah</strong></td>
+<td>Laporan, statistik, monitoring</td>
+<td>View-Only</td>
+</tr>
+<tr>
+<td><strong>Guru/Wali Kelas</strong></td>
+<td>Buat ujian, kelola soal, nilai essai</td>
+<td>Limited (ujian sendiri)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="akses-panel-admin-ujian">Akses Panel Admin Ujian</h2>
+<h3 id="login-admin">Login Admin</h3>
+<ol>
+<li>Buka portal admin: <code>https://edupoin.sekolah.id/admin</code></li>
+<li>Login dengan akun <strong>Admin</strong> atau <strong>Tata Usaha</strong></li>
+<li>Di dashboard, cari menu <strong>"Ujian Online"</strong> atau <strong>"Manajemen Ujian"</strong></li>
+<li>(Atau akses langsung: <code>https://edupoin.sekolah.id/admin/ujian-online</code>)</li>
+</ol>
+<h3 id="dashboard-admin-ujian-online">Dashboard Admin Ujian Online</h3>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────────┐
+│ 🎓 UJIAN ONLINE - ADMIN DASHBOARD                       │
+│ Selamat Datang, Pak Admin!                              │
+└─────────────────────────────────────────────────────────┘
+
+📊 STATISTIK SISTEM:
+├─ Total Ujian: 24
+├─ Ujian Aktif (Berlangsung): 3
+├─ Ujian Selesai: 18
+├─ Ujian Draft: 3
+└─ Total Sesi Ujian: 456
+
+👥 PENGGUNA &amp; PERMISSIONS:
+├─ Guru: 18 orang
+├─ Siswa: 320 orang
+├─ Wali Kelas: 12 orang
+├─ Admin: 2 orang
+└─ Last Updated: 27 April 2026 10:30
+
+⚡ STATUS SISTEM:
+├─ Database: ✅ Online
+├─ Cache: ✅ Active
+├─ Queue: ✅ Running
+├─ Backup Last: 26 April 2026 23:00
+└─ Disk Usage: 45 GB / 100 GB (45%)
+
+─────────────────────────────────────────────────────────
+
+📋 MENU UTAMA:
+
+[📚 Kelola Master Data]
+├─ 👥 Guru
+├─ 🎓 Siswa
+├─ 📍 Kelas
+├─ 📖 Mata Pelajaran
+├─ 🗓️ Semester
+└─ 📄 Bank Soal
+
+[⚙️ Konfigurasi Sistem]
+├─ Setting Global
+├─ Permissions &amp; Roles
+├─ Template Ujian
+└─ Advanced Settings
+
+[📊 Monitoring &amp; Laporan]
+├─ Lihat Semua Ujian
+├─ Statistik Ujian
+├─ Laporan Nilai
+├─ Activity Logs
+└─ Performance Report
+
+[🔧 Maintenance &amp; Backup]
+├─ Backup Database
+├─ Restore Data
+├─ Cleanup Cache
+├─ Logs Viewer
+└─ System Health Check
+
+─────────────────────────────────────────────────────────
+</code></pre></div>
+<hr />
+<h2 id="setup-awal-first-time">Setup Awal (First Time)</h2>
+<h3 id="checklist-setup-awal">Checklist Setup Awal</h3>
+<p>Untuk implementasi pertama kali, ikuti checklist berikut:</p>
+<div class="highlight"><pre><span></span><code>☐ 1. Verifikasi Data Master
+☐ 2. Konfigurasi Permissions
+☐ 3. Setup Parameter Global
+☐ 4. Import Bank Soal (jika ada)
+☐ 5. Create Ujian Pilot/Testing
+☐ 6. Training Guru
+☐ 7. Uji Coba Dengan Siswa
+☐ 8. Go Live
+</code></pre></div>
+<h3 id="langkah-1-verifikasi-data-master">Langkah 1: Verifikasi Data Master</h3>
+<p>Pastikan data referensi sudah lengkap sebelum membuat ujian.</p>
+<h4 id="periksa-data-guru">Periksa Data Guru</h4>
+<ol>
+<li>Buka menu <strong>"Kelola Master Data"</strong> → <strong>"Guru"</strong></li>
+<li>Pastikan semua guru sudah ter-input dengan:</li>
+<li>✅ NIP / ID</li>
+<li>✅ Nama Lengkap</li>
+<li>✅ Email (untuk login &amp; notifikasi)</li>
+<li>✅ Status Aktif</li>
+</ol>
+<p>Jika ada yang kurang:
+- Klik <strong>"+ Tambah Guru"</strong> untuk add baru
+- Atau upload via Excel jika banyak</p>
+<h4 id="periksa-data-siswa">Periksa Data Siswa</h4>
+<ol>
+<li>Buka menu <strong>"Kelola Master Data"</strong> → <strong>"Siswa"</strong></li>
+<li>Filter by Kelas untuk memastikan setiap kelas memiliki siswa</li>
+<li>Jika ada yang kurang, import dari sistem sebelumnya atau add manual</li>
+</ol>
+<h4 id="periksa-data-kelas-mata-pelajaran">Periksa Data Kelas &amp; Mata Pelajaran</h4>
+<ol>
+<li><strong>Kelas</strong> — Pastikan semua kelas yang ada di sekolah sudah terdaftar (X-1, X-2, XI-1, XI-2, XII-1, dll)</li>
+<li><strong>Mata Pelajaran</strong> — Pastikan semua mapel sudah ada (Matematika, IPA, Bahasa Indonesia, dll)</li>
+<li><strong>Semester</strong> — Pastikan semester sudah set (Semester 1, Semester 2)</li>
+</ol>
+<h3 id="langkah-2-konfigurasi-permissions">Langkah 2: Konfigurasi Permissions</h3>
+<p>Tentukan siapa bisa apa di modul Ujian Online.</p>
+<h4 id="akses-permissions-roles">Akses "Permissions &amp; Roles"</h4>
+<ol>
+<li>Menu → <strong>"Konfigurasi Sistem"</strong> → <strong>"Permissions &amp; Roles"</strong></li>
+<li>Anda akan melihat tabel role vs permission</li>
+</ol>
+<h4 id="role-vs-permission-contoh-standar">Role vs Permission (Contoh Standar)</h4>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>ujian.view</th>
+<th>ujian.create</th>
+<th>ujian.edit</th>
+<th>ujian.delete</th>
+<th>ujian.monitoring</th>
+<th>ujian.nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guru</strong></td>
+<td>✅</td>
+<td>✅ (ujian sendiri)</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>Wali Kelas</strong></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>⚠️ (essai saja)</td>
+</tr>
+<tr>
+<td><strong>Admin</strong></td>
+<td>✅</td>
+<td>✅ (all)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>Kepala Sekolah</strong></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅ (view)</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>Siswa</strong></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<p>Jika perlu modifikasi, klik permission yang ingin diubah dan update.</p>
+<h3 id="langkah-3-setup-parameter-global">Langkah 3: Setup Parameter Global</h3>
+<p>Konfigurasi default untuk semua ujian baru yang dibuat guru.</p>
+<h4 id="akses-setting-global">Akses "Setting Global"</h4>
+<ol>
+<li>Menu → <strong>"Konfigurasi Sistem"</strong> → <strong>"Setting Global"</strong></li>
+<li>Isi parameter berikut:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>📝 FORM SETTING GLOBAL:
+
+┌─ Durasi Default ────────────────────────────┐
+│ Durasi Ujian Default: [90] menit           │
+│ (Guru bisa override per ujian)              │
+└─────────────────────────────────────────────┘
+
+┌─ Soal &amp; Bobot ──────────────────────────────┐
+│ Jumlah Soal Default: [5] soal              │
+│ Total Bobot Max: [100] poin                │
+│ PG Auto-Grading: [✅ Aktif]                │
+│ Essai Manual Grading: [✅ Aktif]           │
+└─────────────────────────────────────────────┘
+
+┌─ Attempt &amp; Retry ───────────────────────────┐
+│ Max Attempt (Default): [1] kali            │
+│   (0 = Hanya 1x, tidak boleh retry)        │
+│   (1 = Boleh 2x, dst)                      │
+│ Strategi Nilai Retry: [Terbaik ▼]          │
+│   - Terbaik: Ambil nilai tertinggi         │
+│   - Terakhir: Ambil nilai terakhir         │
+└─────────────────────────────────────────────┘
+
+┌─ Tampilan &amp; Interface ───────────────────────┐
+│ Tampilkan Hasil Langsung: [✅ Ya]           │
+│   (Siswa bisa lihat nilai PG langsung)     │
+│ Tampilkan Jawaban Benar: [❌ Tidak]        │
+│   (Jawaban benar baru terlihat setelah...) │
+│ Soal Random/Acak: [❌ Tidak]               │
+│   (Setiap siswa soal berbeda urutan)       │
+│ Opsi Jawaban Random: [❌ Tidak]            │
+│   (Opsi PG diacak per siswa)               │
+└─────────────────────────────────────────────┘
+
+┌─ Notifikasi ────────────────────────────────┐
+│ Kirim Email Saat Ujian Dimulai: [✅ Ya]   │
+│ Kirim Reminder 1 Jam Sebelum: [✅ Ya]     │
+│ Kirim Notif Saat Essai Dinilai: [✅ Ya]   │
+└─────────────────────────────────────────────┘
+
+[Simpan Setting]  [Reset ke Default]
+</code></pre></div>
+<p><strong>Penjelasan Tiap Setting:</strong></p>
+<ul>
+<li><strong>Durasi Default</strong> — Semua ujian baru akan default 90 menit, bisa diubah per ujian</li>
+<li><strong>Total Bobot Max</strong> — Guru tidak boleh exceed 100 poin total per ujian</li>
+<li><strong>Auto-Grading PG</strong> — Soal PG dinilai otomatis saat submit</li>
+<li><strong>Essai Manual</strong> — Soal essai harus dinilai guru manual</li>
+<li><strong>Max Attempt</strong> — Berapa kali siswa boleh ngambil ujian (0 = 1x, 1 = 2x, dst)</li>
+<li><strong>Strategi Nilai</strong> — Jika retry, ambil nilai terbaik atau nilai terakhir?</li>
+<li><strong>Random Soal/Opsi</strong> — Untuk keamanan (agar siswa tidak copy, tapi biasanya off)</li>
+</ul>
+<p>Klik <strong>"Simpan Setting"</strong> setelah konfigurasi selesai.</p>
+<h3 id="langkah-4-import-bank-soal-opsional">Langkah 4: Import Bank Soal (Opsional)</h3>
+<p>Jika sekolah sudah memiliki bank soal dari sistem sebelumnya:</p>
+<ol>
+<li>Menu → <strong>"Kelola Master Data"</strong> → <strong>"Bank Soal"</strong></li>
+<li>Klik <strong>"📥 Import Bank Soal"</strong></li>
+<li>Upload file Excel dengan format:
+   <div class="highlight"><pre><span></span><code>No | Kode | Pertanyaan | Opsi A | Opsi B | Opsi C | Opsi D | Jawaban Benar | Mapel | Tingkat
+1  | M01  | Berapa hasil ... | 10 | 11 | 12 | 13 | B | Matematika | Easy
+</code></pre></div></li>
+<li>Klik <strong>"Preview &amp; Import"</strong> untuk verifikasi</li>
+<li>Jika OK, klik <strong>"Finish Import"</strong> — Sistem akan import semua soal</li>
+</ol>
+<h3 id="langkah-5-create-ujian-pilottesting">Langkah 5: Create Ujian Pilot/Testing</h3>
+<p>Sebelum go live, buat 1 ujian test untuk testing dengan guru &amp; siswa.</p>
+<ol>
+<li>Minta guru untuk buat ujian testing (atau admin buat langsung sebagai test)</li>
+<li>Jalankan dengan kelas kecil (10-20 siswa) sebagai pilot</li>
+<li>Catat feedback: interface OK? Soal tayang dengan baik? Timer berfungsi?</li>
+<li>Perbaiki issue yang ditemukan</li>
+</ol>
+<h3 id="langkah-6-8-training-testing-go-live">Langkah 6-8: Training, Testing, Go Live</h3>
+<p>Setelah pilot OK:
+- ✅ Training guru: cara buat ujian, manage soal, nilai essai
+- ✅ Uji coba dengan semua siswa 1-2 kelas
+- ✅ Go live untuk seluruh sekolah</p>
+<hr />
+<h2 id="kelola-master-data">Kelola Master Data</h2>
+<h3 id="guru-management">Guru Management</h3>
+<h4 id="lihat-daftar-guru">Lihat Daftar Guru</h4>
+<p>Menu → <strong>"Kelola Master Data"</strong> → <strong>"Guru"</strong></p>
+<div class="highlight"><pre><span></span><code>┌─ DAFTAR GURU ──────────────────────────────────────┐
+│                                                    │
+│ [Cari Guru ________] [+ Tambah Guru] [Import]   │
+│                                                    │
+│ No | NIP      | Nama         | Email    | Status │
+│ 1  | 198503.. | Ari Suryanto | ari@... | Aktif  │
+│ 2  | 197612.. | Bela Kartika | bela@.. | Aktif  │
+│ 3  | 198801.. | Citra Dewi   | citra@. | Nonaktif│
+│                                                    │
+│ [Edit] [Delete] [Lihat Detail]                   │
+│                                                    │
+└────────────────────────────────────────────────────┘
+</code></pre></div>
+<h4 id="tambah-guru-baru">Tambah Guru Baru</h4>
+<ol>
+<li>Klik <strong>"+ Tambah Guru"</strong></li>
+<li>Isi form:
+   <div class="highlight"><pre><span></span><code>NIP/ID: [____________]
+Nama Lengkap: [____________________]
+Email: [____________________]
+No HP: [________________]
+Alamat: [______________________________]
+Status: [Aktif ▼]
+Mata Pelajaran: [Pilih ▼] [Pilih ▼] [+ Add]
+</code></pre></div></li>
+<li>Klik <strong>"Simpan"</strong></li>
+</ol>
+<h4 id="editdelete-guru">Edit/Delete Guru</h4>
+<ol>
+<li>Klik nama guru yang ingin edit</li>
+<li>Ubah data yang diperlukan</li>
+<li>Klik <strong>"Simpan"</strong> atau <strong>"Hapus"</strong> (jika perlu delete)</li>
+</ol>
+<h4 id="import-guru-dari-excel">Import Guru dari Excel</h4>
+<ol>
+<li>Klik <strong>"[Import]"</strong></li>
+<li>Upload file Excel dengan format:
+   <div class="highlight"><pre><span></span><code>NIP | Nama | Email | Status
+198503... | Ari Suryanto | ari@... | Aktif
+</code></pre></div></li>
+<li>System akan validasi &amp; import</li>
+</ol>
+<h3 id="siswa-management">Siswa Management</h3>
+<p>Mirip dengan Guru, tapi untuk Siswa:</p>
+<p>Menu → <strong>"Kelola Master Data"</strong> → <strong>"Siswa"</strong></p>
+<div class="highlight"><pre><span></span><code>┌─ DAFTAR SISWA ──────────────────────┐
+│                                     │
+│ [Cari Siswa ___] [+ Tambah] [Import]│
+│ Filter by Kelas: [XI IPA 1 ▼]      │
+│                                     │
+│ NISN    | Nama    | Kelas  | Status │
+│ 012345  | Ahmad   | XI-1   | Aktif  │
+│ 012346  | Baiti   | XI-1   | Aktif  │
+│ 012347  | Citra   | XI-2   | Mutasi │
+│                                     │
+└─────────────────────────────────────┘
+</code></pre></div>
+<p><strong>Tips:</strong> Import siswa dari sistem sebelumnya/SIM untuk efisiensi.</p>
+<h3 id="kelas-management">Kelas Management</h3>
+<p>Menu → <strong>"Kelola Master Data"</strong> → <strong>"Kelas"</strong></p>
+<p>Setup kelas dan wali kelas:</p>
+<div class="highlight"><pre><span></span><code>┌─ KELAS &amp; WALI KELAS ─────────────────┐
+│                                      │
+│ Kelas | Wali Kelas    | Jml Siswa  │
+│ X-1   | Pak Ari S.    | 32 siswa   │
+│ X-2   | Ibu Bela K.   | 30 siswa   │
+│ XI-1  | Pak Citra D.  | 28 siswa   │
+│ XI-2  | Ibu Dinda P.  | 29 siswa   │
+│ XII-1 | Pak Eka P.    | 26 siswa   │
+│                                      │
+│ [Edit] [Delete]                      │
+│                                      │
+└──────────────────────────────────────┘
+</code></pre></div>
+<h3 id="mata-pelajaran-management">Mata Pelajaran Management</h3>
+<p>Menu → <strong>"Kelola Master Data"</strong> → <strong>"Mata Pelajaran"</strong></p>
+<div class="highlight"><pre><span></span><code>┌─ DAFTAR MATA PELAJARAN ──────────────┐
+│                                      │
+│ [+ Tambah Mapel]                     │
+│                                      │
+│ ID | Mapel           | KKM | Guru   │
+│ 1  | Matematika      | 70  | 8 guru │
+│ 2  | IPA             | 75  | 6 guru │
+│ 3  | Bahasa Indonesia| 70  | 5 guru │
+│ 4  | Bahasa Inggris  | 70  | 4 guru │
+│ 5  | Sejarah         | 70  | 3 guru │
+│                                      │
+│ [Edit] [Delete] [Lihat Guru]        │
+│                                      │
+└──────────────────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="konfigurasi-sistem">Konfigurasi Sistem</h2>
+<h3 id="ujian-template">Ujian Template</h3>
+<p>Buat template ujian yang bisa di-reuse:</p>
+<p>Menu → <strong>"Konfigurasi Sistem"</strong> → <strong>"Template Ujian"</strong></p>
+<div class="highlight"><pre><span></span><code>Contoh Template &quot;UTS Standard&quot;:
+├─ Durasi: 90 menit
+├─ Soal: 5 (3 PG + 2 Essai)
+├─ Bobot: 100 poin (PG 40, Essai 60)
+├─ Max Attempt: 0 (1x saja)
+├─ Random Soal: Tidak
+└─ Essai Manual Grade: Ya
+
+Contoh Template &quot;Pop Quiz&quot;:
+├─ Durasi: 30 menit
+├─ Soal: 3 (3 PG)
+├─ Bobot: 30 poin
+├─ Max Attempt: 1 (boleh 2x)
+├─ Random Soal: Ya
+└─ Essai: Tidak ada
+</code></pre></div>
+<p>Guru bisa pilih template ketika buat ujian baru → lebih cepat setup.</p>
+<h3 id="advanced-settings">Advanced Settings</h3>
+<p>Menu → <strong>"Konfigurasi Sistem"</strong> → <strong>"Advanced Settings"</strong></p>
+<div class="highlight"><pre><span></span><code>┌─ ADVANCED SETTINGS ────────────────┐
+│                                    │
+│ 🔐 Security:                       │
+│ □ Disable Copy-Paste dalam ujian  │
+│ □ Disable Right-Click dalam ujian │
+│ □ Require Webcam untuk Ujian      │
+│                                    │
+│ ⏱️ Timing:                         │
+│ □ Auto-Submit pada waktu habis     │
+│ □ Grace Period (menit): [5]       │
+│                                    │
+│ 📧 Email:                         │
+│ □ Send notification to parents    │
+│ □ Email template: [Choose ▼]      │
+│                                    │
+│ 📊 Analytics:                     │
+│ □ Track student behavior          │
+│ □ Save session logs               │
+│                                    │
+│ [Simpan] [Reset]                  │
+│                                    │
+└────────────────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="monitoring-laporan-sistem">Monitoring &amp; Laporan Sistem</h2>
+<h3 id="lihat-semua-ujian">Lihat Semua Ujian</h3>
+<p>Menu → <strong>"Monitoring &amp; Laporan"</strong> → <strong>"Lihat Semua Ujian"</strong></p>
+<div class="highlight"><pre><span></span><code>┌─ DAFTAR SEMUA UJIAN (ADMIN VIEW) ──────────────┐
+│                                                 │
+│ Filter: [Guru ▼] [Status ▼] [Mapel ▼] [Cari]  │
+│                                                 │
+│ Ujian              | Guru         | Status    │
+│ UTS Matematika     | Pak Ari S.   | Selesai   │
+│ Kuis IPA           | Ibu Bela K.  | Berlangsung│
+│ UAS Bahasa Inggris | Pak Citra D. | Draft     │
+│                                                 │
+│ [Lihat Detail] [Edit] [Delete]                │
+│                                                 │
+└─────────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="statistik-ujian">Statistik Ujian</h3>
+<p>Menu → <strong>"Monitoring &amp; Laporan"</strong> → <strong>"Statistik Ujian"</strong></p>
+<div class="highlight"><pre><span></span><code>📊 STATISTIK UJIAN BULAN APRIL 2026:
+
+Total Ujian Dilakukan: 24
+├─ UTS: 8
+├─ UAS: 6
+├─ Ulangan Harian: 7
+└─ Kuis: 3
+
+Total Sesi: 456 sesi (24 ujian × rata-rata 19 siswa)
+├─ Selesai: 445 (97%)
+├─ Tidak Ikut: 11 (3%)
+
+Rata-rata Nilai:
+├─ Keseluruhan: 75.2 / 100
+├─ PG: 73.1 / 100
+├─ Essai: 77.3 / 100
+
+Performance:
+├─ Kelas X: 72.1 (paling rendah)
+├─ Kelas XI: 76.8 (medium)
+├─ Kelas XII: 77.5 (tertinggi)
+
+Mapel dengan Nilai Tertinggi:
+├─ 1. Bahasa Inggris: 82.3
+├─ 2. Bahasa Indonesia: 79.1
+├─ 3. Matematika: 75.2
+
+Mapel Perlu Perhatian (Nilai Rendah):
+├─ 1. IPA: 70.5 ← Alert
+├─ 2. Sejarah: 72.3 ← Alert
+</code></pre></div>
+<h3 id="laporan-nilai-ujian">Laporan Nilai Ujian</h3>
+<p>Menu → <strong>"Monitoring &amp; Laporan"</strong> → <strong>"Laporan Nilai"</strong></p>
+<div class="highlight"><pre><span></span><code>┌─ LAPORAN NILAI UJIAN ──────────────────┐
+│                                        │
+│ Filter:                                │
+│ Ujian: [UTS Matematika ▼]             │
+│ Kelas: [Semua Kelas ▼]                │
+│ Format: [Excel ▼]                     │
+│                                        │
+│ [Preview] [Download] [Print]          │
+│                                        │
+│ Preview Laporan:                       │
+│ ┌──────────────────────────────────┐  │
+│ │ No | Nama | PG | Essai | Total │  │
+│ │ 1  | Andi | 60 | 28    | 88    │  │
+│ │ 2  | Budi | 50 | 20    | 70    │  │
+│ │ ... (dst) ...                 │  │
+│ └──────────────────────────────────┘  │
+│                                        │
+└────────────────────────────────────────┘
+</code></pre></div>
+<hr />
+<h2 id="troubleshooting-maintenance">Troubleshooting &amp; Maintenance</h2>
+<h3 id="backup-database">Backup Database</h3>
+<p>Menu → <strong>"Maintenance &amp; Backup"</strong> → <strong>"Backup Database"</strong></p>
+<div class="highlight"><pre><span></span><code>┌─ BACKUP DATABASE ──────────────────┐
+│                                    │
+│ Jadwal Backup Otomatis:           │
+│ ☑ Aktif                           │
+│   Waktu: [23:00 ▼] setiap hari  │
+│   Retensi: [7] hari               │
+│                                    │
+│ Backup Manual:                    │
+│ [🔄 Backup Sekarang]              │
+│                                    │
+│ Riwayat Backup:                  │
+│ 27 April 2026 23:00 - 2.5 GB ✅  │
+│ 26 April 2026 23:00 - 2.4 GB ✅  │
+│ 25 April 2026 23:00 - 2.3 GB ✅  │
+│                                    │
+│ [Download] [Delete]               │
+│                                    │
+└────────────────────────────────────┘
+</code></pre></div>
+<h3 id="cleanup-cache">Cleanup Cache</h3>
+<p>Jika sistem terasa lambat:</p>
+<ol>
+<li>Menu → <strong>"Maintenance &amp; Backup"</strong> → <strong>"Cleanup Cache"</strong></li>
+<li>Klik <strong>"🧹 Clear All Cache"</strong></li>
+<li>Sistem akan bersihkan cache, restart akan makan ~2 menit</li>
+</ol>
+<h3 id="activity-logs">Activity Logs</h3>
+<p>Menu → <strong>"Maintenance &amp; Backup"</strong> → <strong>"Activity Logs"</strong></p>
+<div class="highlight"><pre><span></span><code>┌─ ACTIVITY LOGS ────────────────────────────┐
+│                                            │
+│ Filter: [User ▼] [Action ▼] [Date ▼]    │
+│                                            │
+│ Timestamp        | User      | Action    │
+│ 27 Apr 10:45     | Pak Ari   | Create Ujian &quot;UTS Mat&quot; │
+│ 27 Apr 10:30     | Admin     | Edit Setting Global    │
+│ 27 Apr 10:15     | Ibu Bela  | Submit Nilai Essai    │
+│ 27 Apr 10:00     | Sistem    | Auto-backup Database  │
+│                                            │
+│ [View Detail]                              │
+│                                            │
+└────────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="system-health-check">System Health Check</h3>
+<p>Menu → <strong>"Maintenance &amp; Backup"</strong> → <strong>"System Health Check"</strong></p>
+<div class="highlight"><pre><span></span><code>✅ STATUS SISTEM:
+├─ Database: ✅ ONLINE (Response: 5ms)
+├─ Cache Server: ✅ ONLINE (Memory: 2.1 GB)
+├─ Queue Worker: ✅ RUNNING (Jobs: 45)
+├─ Email Service: ✅ ACTIVE (Sent today: 123)
+├─ File Storage: ✅ OK (Used: 45 GB / 100 GB)
+├─ SSL Certificate: ✅ VALID (Expires: 2027-04-15)
+└─ Disk Space: ⚠️ WARNING (55 GB free, consider cleanup)
+
+Recommendations:
+- ⚠️ Consider archiving old exams (&gt;1 year) to free disk space
+- ℹ️ Next backup scheduled at 23:00 today
+- ℹ️ Database maintenance scheduled for Sunday 02:00
+</code></pre></div>
+<hr />
+<h2 id="pertanyaan-umum-faq">Pertanyaan Umum (FAQ)</h2>
+<h3 id="q-bagaimana-jika-ada-kesalahan-data-guru-di-master-data">Q: Bagaimana jika ada kesalahan data guru di master data?</h3>
+<p><strong>A:</strong>
+1. Buka menu Guru Management
+2. Cari guru yang salah data-nya
+3. Klik Edit
+4. Perbaiki data (NIP, nama, email, dll)
+5. Simpan
+6. Email guru untuk notify perubahan (jika ada)</p>
+<h3 id="q-berapa-sering-saya-harus-backup-database">Q: Berapa sering saya harus backup database?</h3>
+<p><strong>A:</strong>
+- <strong>Minimal:</strong> 1x sehari (misalnya, jam 23:00)
+- <strong>Recommended:</strong> Backup otomatis setiap hari + manual backup setelah "big event" (ujian besar, import data masif, dll)
+- <strong>Retention:</strong> Simpan minimal 7 hari backup</p>
+<h3 id="q-bagaimana-jika-server-lambat-saat-ujian-berlangsung">Q: Bagaimana jika server lambat saat ujian berlangsung?</h3>
+<p><strong>A:</strong>
+1. <strong>Short term:</strong> Klik "Clear Cache" di maintenance
+2. <strong>Monitor:</strong> Lihat Activity Logs apakah ada activity mencurigakan
+3. <strong>Check:</strong> System Health Check — apakah ada resource yang overloaded?
+4. <strong>Long term:</strong> Upgrade server resources atau optimize database</p>
+<h3 id="q-dapatkah-saya-reset-password-gurusiswa">Q: Dapatkah saya reset password guru/siswa?</h3>
+<p><strong>A:</strong>
+Tergantung sistem:
+- Jika sistem terintegrasi dengan auth system sekolah (LDAP/AD) → Hubungi admin network
+- Jika standalone → Admin bisa reset via "User Management" (biasanya di sebelah "Master Data")</p>
+<h3 id="q-bagaimana-jika-guru-lupa-cara-buat-ujian">Q: Bagaimana jika guru lupa cara buat ujian?</h3>
+<p><strong>A:</strong>
+1. Hubungi guru untuk provide dokumentasi/video tutorial (sudah ada di docs)
+2. Atau setup ujian untuk guru &amp; transfer ownership
+3. Jika banyak guru yang butuh bantuan → Selenggarakan training lagi</p>
+<h3 id="q-dapatkah-saya-export-laporan-ke-format-berbeda-pdf-csv-dll">Q: Dapatkah saya export laporan ke format berbeda (PDF, CSV, dll)?</h3>
+<p><strong>A:</strong> Ya, di menu "Laporan Nilai":
+1. Pilih ujian &amp; kelas
+2. Pilih format: Excel / PDF / CSV
+3. Klik Download</p>
+<h3 id="q-bagaimana-backup-restore-jika-ada-disaster">Q: Bagaimana backup &amp; restore jika ada disaster?</h3>
+<p><strong>A:</strong>
+<strong>Backup:</strong>
+- Aktifkan auto-backup (setiap hari jam 23:00)
+- Backup bisa disimpan di cloud atau external storage</p>
+<p><strong>Restore:</strong>
+- Jika ada issue, hubungi admin/IT
+- Restore dari backup terakhir yang OK
+- Proses restore biasanya 10-30 menit tergantung size database</p>
+<hr />
+<h2 id="bantuan-dukungan">🆘 Bantuan &amp; Dukungan</h2>
+<p><strong>Kontak Support:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Kontak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Masalah teknis sistem</td>
+<td>Admin IT (Jam kerja)</td>
+</tr>
+<tr>
+<td>Data master salah</td>
+<td>Tata Usaha</td>
+</tr>
+<tr>
+<td>Ujian tidak muncul</td>
+<td>Admin atau Guru Pembuat Ujian</td>
+</tr>
+<tr>
+<td>Password reset</td>
+<td>Admin Network/IT</td>
+</tr>
+<tr>
+<td>Report bug</td>
+<td>IT atau Tim Development</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Jam Support:</strong> 07:00 - 16:00 Senin-Jumat (non-holiday)</p>
+<hr />
+<p><strong>Selamat Mengelola Ujian Online! 🎓✅</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": 1.0}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
