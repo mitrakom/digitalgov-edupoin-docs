@@ -3048,10 +3048,17 @@ A: Tunggu 2-3 menit. Jika masih stuck, refresh halaman dan check di database apa
 <ul>
 <li>✅ Promosikan siswa ke tingkat berikutnya</li>
 <li>✅ Tandai siswa lulus (untuk tingkat 12)</li>
-<li>✅ Tangani pindah jurusan / pindah kelas / tidak naik</li>
+<li>✅ Tangani pindah program/konsentrasi / pindah kelas / tidak naik</li>
 <li>✅ Snapshot poin pelanggaran sebelum reset</li>
 <li>✅ Buat riwayat kelas lengkap</li>
+<li>✅ <strong>SMK Mode</strong>: Pilih Konsentrasi Keahlian saat siswa kelas 10 naik ke kelas 11</li>
 </ul>
+<blockquote>
+<p><strong>ℹ️ SMK vs SMA Mode</strong><br />
+Tampilan halaman ini menyesuaikan otomatis berdasarkan <strong>Bentuk Sekolah</strong> yang dikonfigurasi di Profil Sekolah:
+- <strong>SMK/MAK</strong>: Saat siswa kelas 10 naik ke kelas 11, kolom <strong>"Konsentrasi Keahlian"</strong> akan muncul — guru/TU wajib memilih konsentrasi sebelum memilih kelas tujuan.
+- <strong>SMA/MA</strong>: Tidak ada kolom konsentrasi, langsung pilih kelas tujuan sesuai peminatan.</p>
+</blockquote>
 <h3 id="langkah-1-akses-halaman-kenaikan-kelas">Langkah 1: Akses Halaman Kenaikan Kelas</h3>
 <ol>
 <li>Di Admin Panel, klik <strong>"Proses Akhir Semester"</strong> → <strong>"Kenaikan Kelas"</strong></li>
@@ -3079,16 +3086,26 @@ A: Tunggu 2-3 menit. Jika masih stuck, refresh halaman dan check di database apa
 <h3 id="langkah-3-load-preview-siswa">Langkah 3: Load Preview Siswa</h3>
 <ol>
 <li>Setelah memilih tahun ajaran, klik <strong>"Load Preview Siswa"</strong></li>
-<li>Sistem akan menampilkan tabel dinamis dengan struktur:</li>
+<li>Sistem akan menampilkan tabel dinamis per kelas</li>
 </ol>
-<div class="highlight"><pre><span></span><code>KELAS 10 IPA 1
-────────────────────────────────────────────────────
-| Nama Siswa      | Keputusan    | Kelas Tujuan | Catatan |
-|─────────────────|──────────────|──────────────|─────────|
-| Adi Pratama     | naik_kelas   | 11 IPA 1     | -       |
-| Budi Santoso    | lulus        | -            | -       |
-| Citra Dewi      | tidak_naik   | 10 IPA 1     | -       |
-</code></pre></div>
+<p><strong>Tampilan SMA/MA</strong> (tanpa kolom konsentrasi):
+<div class="highlight"><pre><span></span><code>KELAS 10 A
+────────────────────────────────────────────────────────────
+| Nama Siswa    | Keputusan   | Kelas Tujuan | Catatan |
+|───────────────|─────────────|──────────────|─────────|
+| Adi Pratama   | naik_kelas  | 11 IPA 1     | -       |
+| Budi Santoso  | lulus       | -            | -       |
+| Citra Dewi    | tidak_naik  | 10 A         | -       |
+</code></pre></div></p>
+<p><strong>Tampilan SMK/MAK — Kelas 10</strong> (ada kolom Konsentrasi Keahlian):
+<div class="highlight"><pre><span></span><code>KELAS 10 TKJ A
+⚠ SMK Mode: Siswa kelas 10 perlu memilih Konsentrasi Keahlian untuk kelas 11
+────────────────────────────────────────────────────────────────────────────
+| Nama Siswa    | Keputusan  | Konsentrasi Keahlian         | Kelas Tujuan | Catatan |
+|───────────────|────────────|──────────────────────────────|──────────────|─────────|
+| Adi Pratama   | naik_kelas | TKJ → Tek. Jaringan &amp; Telekomun. | 11 TKJ-TJKT A | -  |
+| Budi Santoso  | naik_kelas | TKJ → Sistem Informasi &amp; Aplik.  | 11 TKJ-SINA A | -  |
+</code></pre></div></p>
 <p><strong>Default Keputusan:</strong>
 - Tingkat 10-11 → <strong>naik_kelas</strong> (default)
 - Tingkat 12 → <strong>lulus</strong> (default)</p>
@@ -3124,18 +3141,19 @@ A: Tunggu 2-3 menit. Jika masih stuck, refresh halaman dan check di database apa
 2. Field <strong>"Kelas Tujuan"</strong> akan disabled (greyed out)
 3. (Optional) Isi catatan</p>
 <hr />
-<p><strong>4️⃣ Pindah Jurusan</strong>
-- Artinya: Siswa ganti jurusan (tingkat sama)
-- Wajib pilih: <strong>Kelas Tujuan</strong> (tingkat sama, jurusan beda)
-- Contoh: 11 IPA 1 → 11 IPS 1</p>
+<p><strong>4️⃣ Pindah Jurusan / Program / Konsentrasi</strong>
+- Artinya: Siswa ganti program studi atau peminatan (tingkat sama)
+- Wajib pilih: <strong>Kelas Tujuan</strong> (tingkat sama, program/konsentrasi beda)
+- Contoh SMA: 11 IPA 1 → 11 IPS 1
+- Contoh SMK: 11 TKJ-TJKT A → 11 TKJ-SINA A</p>
 <p><strong>Cara edit:</strong>
 1. Klik dropdown <strong>"Keputusan"</strong> → <strong>"Pindah Jurusan"</strong>
 2. Dropdown <strong>"Kelas Tujuan"</strong> aktif
-3. Pilih kelas jurusan baru (tingkat tetap sama)</p>
+3. Pilih kelas program baru (tingkat tetap sama)</p>
 <hr />
 <p><strong>5️⃣ Pindah Kelas</strong>
-- Artinya: Siswa ganti kelas dalam jurusan yang sama
-- Wajib pilih: <strong>Kelas Tujuan</strong> (jurusan sama, kelas beda)
+- Artinya: Siswa ganti kelas dalam program yang sama
+- Wajib pilih: <strong>Kelas Tujuan</strong> (program sama, kelas beda)
 - Contoh: 11 IPA 1 → 11 IPA 2</p>
 <p><strong>Cara edit:</strong>
 1. Klik dropdown <strong>"Keputusan"</strong> → <strong>"Pindah Kelas"</strong>
@@ -3201,14 +3219,14 @@ Summary:
 - Pindah Kelas: 0 siswa
 </code></pre></div></p>
 <h3 id="contoh-skenario-kenaikan-kelas">Contoh Skenario Kenaikan Kelas</h3>
-<p><strong>Skenario: Sekolah dengan 3 tingkat (10, 11, 12)</strong></p>
+<p><strong>Skenario A: SMA dengan 3 tingkat (10, 11, 12)</strong></p>
 <div class="highlight"><pre><span></span><code>TINGKAT 10 (36 siswa)
-├─ Naik Kelas → 11 (35 siswa)
-├─ Tidak Naik → 10 (1 siswa, &quot;Nilai tidak tuntas&quot;)
+├─ Naik Kelas → 11 IPA 1 / 11 IPS 1 (35 siswa)   [pilih kelas tujuan]
+├─ Tidak Naik → 10 A (1 siswa, &quot;Nilai tidak tuntas&quot;)
 
 TINGKAT 11 (33 siswa)
 ├─ Naik Kelas → 12 (30 siswa)
-├─ Pindah Jurusan → Jurusan beda (2 siswa, &quot;Permintaan siswa&quot;)
+├─ Pindah Jurusan → Peminatan beda (2 siswa, &quot;Permintaan siswa&quot;)
 ├─ Mutasi Keluar → Keluar (1 siswa, &quot;Pindah ke sekolah X&quot;)
 
 TINGKAT 12 (32 siswa)
@@ -3216,12 +3234,33 @@ TINGKAT 12 (32 siswa)
 ├─ Mutasi Keluar (1 siswa, &quot;Lanjut ke pesantren&quot;)
 
 TOTAL BATCH:
-✅ Naik Kelas: 65
-✅ Tidak Naik: 1
-✅ Lulus: 31
-✅ Mutasi: 2
-✅ Pindah Jurusan: 2
+✅ Naik Kelas: 65  ✅ Tidak Naik: 1  ✅ Lulus: 31  ✅ Mutasi: 2  ✅ Pindah Jurusan: 2
 </code></pre></div>
+<p><strong>Skenario B: SMK dengan reshuffling kelas 10 → 11</strong></p>
+<div class="highlight"><pre><span></span><code>TINGKAT 10 TKJ A (30 siswa) — SMK Mode: Kolom Konsentrasi muncul
+├─ Naik Kelas → Konsentrasi: TKJ-TJKT → Kelas 11 TKJ-TJKT A (18 siswa)
+├─ Naik Kelas → Konsentrasi: TKJ-SINA → Kelas 11 TKJ-SINA A (11 siswa)
+├─ Tidak Naik → Kelas 10 TKJ A (1 siswa, &quot;Nilai tidak tuntas&quot;)
+
+TINGKAT 10 RPL A (28 siswa) — SMK Mode: Kolom Konsentrasi muncul
+├─ Naik Kelas → Konsentrasi: RPL-PEK → Kelas 11 RPL-PEK A (15 siswa)
+├─ Naik Kelas → Konsentrasi: RPL-KSI → Kelas 11 RPL-KSI A (13 siswa)
+
+TINGKAT 11 (semua konsentrasi, 56 siswa) — Normal, tanpa kolom konsentrasi
+├─ Naik Kelas → 12 (50 siswa)
+├─ Tidak Naik (3 siswa)
+├─ Mutasi Keluar (3 siswa)
+
+TINGKAT 12 (48 siswa)
+├─ Lulus (46 siswa)
+├─ Mutasi Keluar (2 siswa)
+
+TOTAL BATCH:
+✅ Naik Kelas: 107  ✅ Tidak Naik: 4  ✅ Lulus: 46  ✅ Mutasi: 5
+</code></pre></div>
+<blockquote>
+<p><strong>💡 Tips SMK</strong>: Pastikan kelas untuk setiap Konsentrasi Keahlian di tahun ajaran tujuan sudah dibuat terlebih dahulu di menu <strong>Master Data → Kelas</strong> sebelum menjalankan proses kenaikan kelas.</p>
+</blockquote>
 <hr />
 <h2 id="panduan-3-reset-poin-tahunan">Panduan 3: Reset Poin Tahunan</h2>
 <h3 id="kapan-dijalankan_2">Kapan Dijalankan?</h3>
