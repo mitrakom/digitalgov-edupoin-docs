@@ -1716,10 +1716,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#langkah-2-pilih-tahun-ajaran_1" class="md-nav__link">
+  <a href="#langkah-2-verifikasi-periode-otomatis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Langkah 2: Pilih Tahun Ajaran
+        Langkah 2: Verifikasi Periode Otomatis
       
     </span>
   </a>
@@ -1860,7 +1860,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#langkah-2-pilih-tahun-ajaran_2" class="md-nav__link">
+  <a href="#langkah-2-pilih-tahun-ajaran_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Langkah 2: Pilih Tahun Ajaran
@@ -2454,10 +2454,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#langkah-2-pilih-tahun-ajaran_1" class="md-nav__link">
+  <a href="#langkah-2-verifikasi-periode-otomatis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Langkah 2: Pilih Tahun Ajaran
+        Langkah 2: Verifikasi Periode Otomatis
       
     </span>
   </a>
@@ -2598,7 +2598,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#langkah-2-pilih-tahun-ajaran_2" class="md-nav__link">
+  <a href="#langkah-2-pilih-tahun-ajaran_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Langkah 2: Pilih Tahun Ajaran
@@ -2864,7 +2864,7 @@
 <li>Promosikan siswa ke tingkat berikutnya</li>
 <li>Tandai siswa yang lulus</li>
 <li>
-<p>Tangani kasus khusus (pindah jurusan, mutasi, tidak naik)</p>
+<p>Tangani kasus khusus (pindah konsentrasi/program, mutasi, tidak naik)</p>
 </li>
 <li>
 <p><strong>Reset Poin Tahunan</strong></p>
@@ -3054,49 +3054,39 @@ A: Tunggu 2-3 menit. Jika masih stuck, refresh halaman dan check di database apa
 <li>✅ <strong>SMK Mode</strong>: Pilih Konsentrasi Keahlian saat siswa kelas 10 naik ke kelas 11</li>
 </ul>
 <blockquote>
-<p><strong>ℹ️ SMK vs SMA Mode</strong><br />
-Tampilan halaman ini menyesuaikan otomatis berdasarkan <strong>Bentuk Sekolah</strong> yang dikonfigurasi di Profil Sekolah:
-- <strong>SMK/MAK</strong>: Saat siswa kelas 10 naik ke kelas 11, kolom <strong>"Konsentrasi Keahlian"</strong> akan muncul — guru/TU wajib memilih konsentrasi sebelum memilih kelas tujuan.
-- <strong>SMA/MA</strong>: Tidak ada kolom konsentrasi, langsung pilih kelas tujuan sesuai peminatan.</p>
+<p><strong>ℹ️ Mode SMK (Implementasi Saat Ini)</strong><br />
+Halaman kenaikan kelas saat ini menggunakan alur SMK penuh. Untuk siswa kelas 10 ke 11, operator wajib memilih konsentrasi keahlian sebelum menentukan kelas tujuan.</p>
 </blockquote>
 <h3 id="langkah-1-akses-halaman-kenaikan-kelas">Langkah 1: Akses Halaman Kenaikan Kelas</h3>
 <ol>
 <li>Di Admin Panel, klik <strong>"Proses Akhir Semester"</strong> → <strong>"Kenaikan Kelas"</strong></li>
 <li>Halaman terbuka dengan form wizard</li>
 </ol>
-<h3 id="langkah-2-pilih-tahun-ajaran_1">Langkah 2: Pilih Tahun Ajaran</h3>
+<h3 id="langkah-2-verifikasi-periode-otomatis">Langkah 2: Verifikasi Periode Otomatis</h3>
 <table>
 <thead>
 <tr>
 <th>Field</th>
-<th>Cara Isi</th>
+<th>Perilaku</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Dari Tahun Ajaran</strong></td>
-<td>Pilih tahun ajaran saat ini (misal: <strong>2025/2026 - Genap</strong>)</td>
+<td><strong>Tahun Ajaran Aktif (Genap)</strong></td>
+<td>Terisi otomatis dari tahun ajaran aktif user Admin/TU</td>
 </tr>
 <tr>
-<td><strong>Ke Tahun Ajaran</strong></td>
-<td>Pilih tahun ajaran depan (misal: <strong>2026/2027 - Ganjil</strong>)</td>
+<td><strong>Target Tahun Ajaran (Ganjil)</strong></td>
+<td>Dipilih otomatis ke semester Ganjil setelah semester aktif</td>
 </tr>
 </tbody>
 </table>
+<p>Jika salah satu periode tidak tersedia/invalid, sistem akan menampilkan banner peringatan dan proses preview dihentikan.</p>
 <h3 id="langkah-3-load-preview-siswa">Langkah 3: Load Preview Siswa</h3>
 <ol>
 <li>Setelah memilih tahun ajaran, klik <strong>"Load Preview Siswa"</strong></li>
 <li>Sistem akan menampilkan tabel dinamis per kelas</li>
 </ol>
-<p><strong>Tampilan SMA/MA</strong> (tanpa kolom konsentrasi):
-<div class="highlight"><pre><span></span><code>KELAS 10 A
-────────────────────────────────────────────────────────────
-| Nama Siswa    | Keputusan   | Kelas Tujuan | Catatan |
-|───────────────|─────────────|──────────────|─────────|
-| Adi Pratama   | naik_kelas  | 11 IPA 1     | -       |
-| Budi Santoso  | lulus       | -            | -       |
-| Citra Dewi    | tidak_naik  | 10 A         | -       |
-</code></pre></div></p>
 <p><strong>Tampilan SMK/MAK — Kelas 10</strong> (ada kolom Konsentrasi Keahlian):
 <div class="highlight"><pre><span></span><code>KELAS 10 TKJ A
 ⚠ SMK Mode: Siswa kelas 10 perlu memilih Konsentrasi Keahlian untuk kelas 11
@@ -3109,6 +3099,11 @@ Tampilan halaman ini menyesuaikan otomatis berdasarkan <strong>Bentuk Sekolah</s
 <p><strong>Default Keputusan:</strong>
 - Tingkat 10-11 → <strong>naik_kelas</strong> (default)
 - Tingkat 12 → <strong>lulus</strong> (default)</p>
+<p>Setelah preview, operator juga mendapatkan:
+- Kartu progres (total siswa, selesai, belum lengkap)
+- Ringkasan keputusan (naik, lulus, mutasi)
+- Peringatan preflight untuk anomali data (kelas tanpa struktur, kandidat kelas tujuan belum siap)
+- Tombol bulk keputusan per kelas</p>
 <h3 id="langkah-4-edit-keputusan-per-siswa">Langkah 4: Edit Keputusan Per Siswa</h3>
 <p>Untuk setiap siswa, Anda bisa mengubah keputusan:</p>
 <h4 id="tipe-keputusan-cara-edit">Tipe Keputusan &amp; Cara Edit:</h4>
@@ -3125,7 +3120,7 @@ Tampilan halaman ini menyesuaikan otomatis berdasarkan <strong>Bentuk Sekolah</s
 <p><strong>2️⃣ Tidak Naik (Mengulang)</strong>
 - Artinya: Siswa mengulang kelas yang sama
 - Wajib pilih: <strong>Kelas Tujuan</strong> (kelas yang sama, tingkat sama)
-- Contoh: 10 IPA 1 → 10 IPA 1 (repeat)
+- Contoh: 10 TKJ A → 10 TKJ A (repeat)
 - Catatan: Bisa di-isi di field "Catatan" (misal: "Nilai tidak tuntas", "Absensi tinggi")</p>
 <p><strong>Cara edit:</strong>
 1. Klik dropdown <strong>"Keputusan"</strong> → <strong>"Tidak Naik"</strong>
@@ -3141,20 +3136,19 @@ Tampilan halaman ini menyesuaikan otomatis berdasarkan <strong>Bentuk Sekolah</s
 2. Field <strong>"Kelas Tujuan"</strong> akan disabled (greyed out)
 3. (Optional) Isi catatan</p>
 <hr />
-<p><strong>4️⃣ Pindah Jurusan / Program / Konsentrasi</strong>
-- Artinya: Siswa ganti program studi atau peminatan (tingkat sama)
+<p><strong>4️⃣ Pindah Program / Konsentrasi</strong>
+- Artinya: Siswa ganti konsentrasi dalam jenjang yang sesuai aturan keputusan
 - Wajib pilih: <strong>Kelas Tujuan</strong> (tingkat sama, program/konsentrasi beda)
-- Contoh SMA: 11 IPA 1 → 11 IPS 1
 - Contoh SMK: 11 TKJ-TJKT A → 11 TKJ-SINA A</p>
 <p><strong>Cara edit:</strong>
-1. Klik dropdown <strong>"Keputusan"</strong> → <strong>"Pindah Jurusan"</strong>
+1. Klik dropdown <strong>"Keputusan"</strong> → <strong>"Pindah Konsentrasi"</strong>
 2. Dropdown <strong>"Kelas Tujuan"</strong> aktif
 3. Pilih kelas program baru (tingkat tetap sama)</p>
 <hr />
 <p><strong>5️⃣ Pindah Kelas</strong>
 - Artinya: Siswa ganti kelas dalam program yang sama
 - Wajib pilih: <strong>Kelas Tujuan</strong> (program sama, kelas beda)
-- Contoh: 11 IPA 1 → 11 IPA 2</p>
+- Contoh: 11 TJKT A → 11 TJKT B</p>
 <p><strong>Cara edit:</strong>
 1. Klik dropdown <strong>"Keputusan"</strong> → <strong>"Pindah Kelas"</strong>
 2. Pilih kelas target</p>
@@ -3175,6 +3169,8 @@ Tampilan halaman ini menyesuaikan otomatis berdasarkan <strong>Bentuk Sekolah</s
 <li>Sistem akan <strong>validate</strong> sebelum eksekusi:</li>
 <li>Untuk keputusan "naik_kelas", "tidak_naik", "pindah_<em>" → </em><em>wajib ada kelas_tujuan_id</em>*</li>
 <li>Untuk keputusan "lulus", "mutasi_keluar" → <strong>harus TIDAK ada kelas_tujuan_id</strong></li>
+<li>Sumber harus semester <strong>Genap</strong> dan target harus semester <strong>Ganjil</strong> setelahnya</li>
+<li>Aturan tingkat dan struktur diverifikasi sesuai jenis keputusan</li>
 </ol>
 <p>Jika ada error:
 <div class="highlight"><pre><span></span><code>❌ Error: Siswa (ID: 5) - Keputusan &quot;naik_kelas&quot; harus memilih Kelas Tujuan
@@ -3215,18 +3211,18 @@ Summary:
 - Tidak Naik: 8 siswa
 - Lulus: 52 siswa
 - Mutasi: 5 siswa
-- Pindah Jurusan: 0 siswa
+- Pindah Konsentrasi: 0 siswa
 - Pindah Kelas: 0 siswa
 </code></pre></div></p>
 <h3 id="contoh-skenario-kenaikan-kelas">Contoh Skenario Kenaikan Kelas</h3>
-<p><strong>Skenario A: SMA dengan 3 tingkat (10, 11, 12)</strong></p>
-<div class="highlight"><pre><span></span><code>TINGKAT 10 (36 siswa)
-├─ Naik Kelas → 11 IPA 1 / 11 IPS 1 (35 siswa)   [pilih kelas tujuan]
-├─ Tidak Naik → 10 A (1 siswa, &quot;Nilai tidak tuntas&quot;)
+<p><strong>Skenario A: SMK tingkat 10-12</strong></p>
+<div class="highlight"><pre><span></span><code>TINGKAT 10 TKJ (36 siswa)
+├─ Naik Kelas → 11 TJKT A / 11 SIJA A (35 siswa)   [pilih konsentrasi + kelas tujuan]
+├─ Tidak Naik → 10 TKJ A (1 siswa, &quot;Nilai tidak tuntas&quot;)
 
-TINGKAT 11 (33 siswa)
+TINGKAT 11 (33 siswa, antar konsentrasi)
 ├─ Naik Kelas → 12 (30 siswa)
-├─ Pindah Jurusan → Peminatan beda (2 siswa, &quot;Permintaan siswa&quot;)
+├─ Pindah Konsentrasi → Konsentrasi beda (2 siswa, &quot;Permintaan siswa&quot;)
 ├─ Mutasi Keluar → Keluar (1 siswa, &quot;Pindah ke sekolah X&quot;)
 
 TINGKAT 12 (32 siswa)
@@ -3234,7 +3230,7 @@ TINGKAT 12 (32 siswa)
 ├─ Mutasi Keluar (1 siswa, &quot;Lanjut ke pesantren&quot;)
 
 TOTAL BATCH:
-✅ Naik Kelas: 65  ✅ Tidak Naik: 1  ✅ Lulus: 31  ✅ Mutasi: 2  ✅ Pindah Jurusan: 2
+✅ Naik Kelas: 65  ✅ Tidak Naik: 1  ✅ Lulus: 31  ✅ Mutasi: 2  ✅ Pindah Konsentrasi: 2
 </code></pre></div>
 <p><strong>Skenario B: SMK dengan reshuffling kelas 10 → 11</strong></p>
 <div class="highlight"><pre><span></span><code>TINGKAT 10 TKJ A (30 siswa) — SMK Mode: Kolom Konsentrasi muncul
@@ -3279,7 +3275,7 @@ TOTAL BATCH:
 <li>Di Admin Panel, klik <strong>"Proses Akhir Semester"</strong> → <strong>"Reset Poin Tahunan"</strong></li>
 <li>Halaman terbuka dengan form pilihan tahun ajaran</li>
 </ol>
-<h3 id="langkah-2-pilih-tahun-ajaran_2">Langkah 2: Pilih Tahun Ajaran</h3>
+<h3 id="langkah-2-pilih-tahun-ajaran_1">Langkah 2: Pilih Tahun Ajaran</h3>
 <table>
 <thead>
 <tr>
@@ -3429,7 +3425,7 @@ Poin Diubah ke 0: 245
 <li>[ ] Rapor sudah di-print dan siap distribusi</li>
 <li>[ ] Tidak ada siswa dengan nilai NaN atau NULL</li>
 <li>[ ] Wali kelas sudah confirm keputusan naik/tidak naik per siswa</li>
-<li>[ ] BK/Kesiswaan sudah review kasus khusus (mutasi, pindah jurusan)</li>
+<li>[ ] BK/Kesiswaan sudah review kasus khusus (mutasi, pindah konsentrasi/program)</li>
 </ul>
 <h3 id="pre-reset-poin-checklist-sebelum-tahun-ajaran-baru">Pre-Reset Poin Checklist (Sebelum tahun ajaran baru)</h3>
 <ul>
