@@ -64,6 +64,10 @@ nav:
     - Siswa: data-management/siswa.md
     - Guru: data-management/guru.md
     - Staf Sekolah: data-management/staf-sekolah.md
+  - Account Management:
+    - Overview: account-management/index.md
+    - Akun Siswa: account-management/siswa.md
+    - Akun Internal: account-management/internal.md
   - Attendance:
     - Presensi: attendance/presensi.md
   - Grading:
@@ -89,5 +93,5 @@ nav:
     - Orang Tua: special-roles/orangtua.md
 
 extra:
-  version: 1.0
-  last_update: May 2026
+  version: 2.0
+  last_update: June 2026
